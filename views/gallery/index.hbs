@@ -1,6 +1,6 @@
 <section class="hero hero--gallery">
     <div class="container">
-        <div class="row">
+        <div class="row mt-5">
             <div class="col-md-8">
                 <h1>{{title}}</h1>
             </div>
@@ -9,7 +9,7 @@
 </section>
 <section class="mainContent">
     <div class="container">
-        <div class="row">
+        <div class="row mt-3">
             <div class="col-md-10">
                 <h2>Kampaukset</h2>
                 {{#if subtitle}}
@@ -21,12 +21,19 @@
                 <div class="galleryItem">
                     {{#each this}}
                     {{#if this.src}}
-                    <picture class="galleryItem--image">
-                        <img class="galleryItem--image__img"
-                            src="{{this.src}}" alt="{{this.alt}}"
-                            loading="lazy" />
-                    </picture>
+                    <a href="/admin/galleryitems/{{this._id}}">
+                        <picture class="galleryItem--image">
+                            <img class="galleryItem--image__img"
+                                src="{{this.src}}" alt="{{this.alt}}"
+                                loading="lazy" />
+                        </picture>
+                    </a>
                     <p class="galleryItem--description">{{this.title}}</p>
+                    <form
+                        action="/admin/galleryitems/{{this._id}}?_method=DELETE"
+                        method="POST"><input type="hidden" name="publicId"
+                            value="{{this.publicId}}" /><button type="submit"
+                            class="btb btn-danger">Poista</button></form>
                     {{/if}}
                     {{/each}}
                 </div>

@@ -1,0 +1,23 @@
+<section class="hero hero--gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>{{title}}</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section className="mainContent">
+				<div className="container">
+					<div className="row">
+						<div className="col-md-10">
+							<h2>Kampaukset</h2>
+						</div>
+						{galleryItems && galleryItems.map((galleryItem) => {
+							return (<div className="col-md-4 col-lg-3 col-sm-6" key={galleryItem.id}>
+								<GalleryItem imageSrc={galleryItem.imageSrc} imageAlt={galleryItem.imageAlt} description={galleryItem.description} />
+							</div>)
+						})}
+					</div>
+				</div>
+			</section>

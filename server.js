@@ -135,7 +135,7 @@ app.use('/', indexRoutes);
 app.use('/', authRoutes);
 app.use('/admin', adminRoutes);
 app.use('/admin/services', serviceRoutes);
-app.use('/admin/galleryItems', galleryItemRoutes);
+app.use('/admin/galleryitems', galleryItemRoutes);
 //Not found 404 generic page
 app.get('*', function (req, res, next) {
     return res.redirect('/error404');

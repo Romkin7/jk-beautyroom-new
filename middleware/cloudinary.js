@@ -1,5 +1,4 @@
 const cloudinary = require('cloudinary').v2;
-const fs = require('fs');
 cloudinary.config({
     cloud_name: process.env.CLOUD_NAME,
     api_key: process.env.CLOUDINARY_API_KEY,
@@ -8,15 +7,27 @@ cloudinary.config({
 });
 
 module.exports.uploadImage = async (req, res, next) => {
- try {
-     const stream = cloudinary.uploader.upload_stream(function (error, result) {
-         req.session.publicId = result.public_id;
-         req.session.secureUrl = result.secure_url;
-         next();
-     });
-     stream.write(req.files.image.data);
-     stream.end();
- } catch(error) {
-     return next(error);
- }
-}
+    try {
+        const stream = cloudinary.uploader.upload_stream(function (
+            error,
+            result,
+        ) {
+            req.session.publicId = result.public_id;
+            req.session.secureUrl = result.secure_url;
+            next();
+        });
+        stream.write(req.files.image.data);
+        stream.end();
+    } catch (error) {
+        return next(error);
+    }
+};
+
+module.exports.deleteImage = async (req, res, next) => {
+    try {
+        await cloudinary.uploader.destroy(req.body.publicId);
+        next();
+    } catch (error) {
+        return next(error);
+    }
+};

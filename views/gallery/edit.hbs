@@ -1,0 +1,57 @@
+<section>
+    <div class="container">
+        <div class="row mt-5 d-flex justify-content-center align-center">
+            <div class="col-sm-12 col-md-6">
+                {{#each galleryItem}}
+                {{#if this.title}}
+                <h1>Muokkaa {{this.title}} kuvaa</h1>
+                {{/if}}
+                {{/each}}
+            </div>
+        </div>
+        <div class="row mt-3 d-flex justify-content-center align-center">
+            <div class="col-sm-12 col-md-6">
+                {{#each galleryItem}}
+                {{#if this._id}}
+                <form action="/admin/galleryitems/{{this._id}}?_method=PUT" method="POST">
+                {{/if}}
+                {{/each}}
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="category">Palvelun Kategoria *</label>
+                                    <select name="category" id="category"
+                                        class="form-control" required>
+                                        {{#each galleryItem}}
+                                        {{#if this.category}}
+                                        <option value="{{this.category}}">{{this.category}}</option>
+                                        {{/if}}
+                                        {{/each}}
+                                        {{#each serviceCategories}}
+                                        <option value={{this.value}}>{{this.name}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                                {{#each galleryItem}}
+                                {{#if this.title}}
+                                <div class="form-group">
+                                    <label class="form-label" for="title">Kuvan
+                                        nimi *</label>
+                                    <input class="form-control" type="text"
+                                        name="title" id="title" value="{{this.title}}" required />
+                                </div>
+                                {{/if}}
+                                {{/each}}
+                                <div class="form-group mt-3">
+                                    <button type="submit" class="btn
+                                        btn-success">Muokkaa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
