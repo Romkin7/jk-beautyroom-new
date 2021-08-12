@@ -1,0 +1,47 @@
+<section>
+    <div class="container">
+        <div class="row mt-5 d-flex justify-content-center align-center">
+            <div class="col-sm-12 col-md-6">
+                <h1>Luo Galleria kuva</h1>
+            </div>
+        </div>
+        <div class="row mt-3 d-flex justify-content-center align-center">
+            <div class="col-sm-12 col-md-6">
+                <form action="/admin/galleryitems" method="POST" enctype="multipart/form-data">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="category">Kuvan Kategoria *</label>
+                                    <select name="category" id="category"
+                                        class="form-control" required>
+                                        <option value="">Valitse kategoria</option>
+                                        {{#each serviceCategories}}
+                                        <option value={{this.value}}>{{this.name}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="title">Palvelun
+                                        nimi *</label>
+                                    <input class="form-control" type="text"
+                                        name="title" id="title" required />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="image">Kuva *</label>
+                                    <input class="form-control" type="file"
+                                        name="image" id="image" required />
+                                </div>
+                                
+                                <div class="form-group mt-3">
+                                    <button type="submit" class="btn
+                                        btn-success">Luo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

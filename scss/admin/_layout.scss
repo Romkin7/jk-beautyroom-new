@@ -1,0 +1,40 @@
+.adminPanelWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    &--sidebar {
+        color: $white;
+        width: 17.5rem;
+        height: 100vh;
+        background: $gradientGray;
+        &--header {
+            padding: 1rem;
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+        &--nav {
+            background-color: rgba($grayDark, 0.7) !important;
+            width: 100%;
+            a,
+            a:visited {
+                color: $white !important;
+            }
+        }
+    }
+    nav {
+        box-shadow: 0 0 6px 6px rgba($darkslateGray, 0.6);
+    }
+    &--main {
+        width: 100%;
+        main {
+            height: 88vh;
+            overflow-y: scroll;
+        }
+    }
+    footer {
+        padding: 0.5rem;
+        background: $gradientGray;
+        color: $white;
+    }
+}

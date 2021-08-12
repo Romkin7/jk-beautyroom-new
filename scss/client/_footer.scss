@@ -1,0 +1,28 @@
+footer {
+	padding: 2rem 0;
+	position: relative;
+	min-height: 35vh;
+	width: 100%;
+	background-color: $gray300;
+	.list-group-item {
+		background-color: $gray300;
+		border-bottom: none;
+	}
+	p,
+	.list-group-item {
+		color: $gray900;
+	}
+	.iconContainer {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		&--icon {
+			width: 4rem;
+			height: 4rem;
+			svg {
+				width: 4rem;
+				height: 4rem;
+			}
+		}
+	}
+}

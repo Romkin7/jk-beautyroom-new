@@ -1,0 +1,52 @@
+{
+    "name": "jk-beautyroom",
+    "version": "1.0.0",
+    "description": "Beauty Salon homepage",
+    "main": "server.js",
+    "scripts": {
+        "test": "npm run test",
+        "start": "node server.js",
+        "dev": "nodemon server.js",
+        "prettier:test": "prettier --check \"**/**/*.js\"",
+        "prettier:fix": "prettier --write \"**/**/*.js\"",
+        "postinstall": "./node_modules/bower/bin/bower install",
+        "sass-watch": "node-sass scss/client/main.scss public/css/style.css -w",
+        "adminsass-watch": "node-sass scss/admin/adminMain.scss public/css/adminStyle.css -w",
+        "start:dev": "concurrently \"npm run dev\" \"npm run sass-watch\" \"npm run adminsass-watch\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Romkin7/jk-beautyroom-new.git"
+    },
+    "author": "Roman Tuomisto",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Romkin7/jk-beautyroom-new/issues"
+    },
+    "homepage": "https://github.com/Romkin7/jk-beautyroom-new#readme",
+    "dependencies": {
+        "bcrypt": "^5.0.1",
+        "cloudinary": "^1.26.3",
+        "compression": "1.7.4",
+        "connect-mongo": "4.4.1",
+        "express": "4.17.1",
+        "express-ejs-layouts": "2.5.1",
+        "express-fileupload": "^1.2.1",
+        "express-flash": "0.0.2",
+        "express-handlebars": "^5.3.3",
+        "express-sanitizer": "1.0.6",
+        "express-session": "1.17.2",
+        "helmet": "4.6.0",
+        "method-override": "3.0.0",
+        "mongoose": "5.13.5",
+        "morgan": "1.10.0",
+        "passport": "0.4.1",
+        "passport-local": "1.0.0"
+    },
+    "devDependencies": {
+        "dotenv": "10.0.0",
+        "husky": "7.0.1",
+        "node-sass": "^6.0.1",
+        "nodemon": "2.0.12"
+    }
+}

@@ -1,0 +1,33 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:
+    #0081a7 !important;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            <img src="/images/logo-jk.png" alt="JK Beauty Room Tmi" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu"
+            aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle
+            navigation">
+            <span class="navbar-toggler-icon"></span>
+            Menu
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav">
+                {{#each navbarLinks}}
+                <li class="nav-item">
+                    {{#if this.ext}}
+                    <a href={{ this.url }} class="nav-link" target="__blank">
+                        {{ this.text }}
+                    </a>
+                    {{else}}
+                    <a class="nav-link" href={{ this.url }}>
+                        {{ this.text }}
+                    </a>
+                    {{/if}}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,51 @@
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>{{title}}</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mainContent">
+    <div class="container">
+        <div class="row justifyCenter">
+            <div class="col-md-10">
+                <h2>Tietoa meistä</h2>
+                {{#if subtitle}}
+                <p>{{subtitle}}</p>
+                {{/if}}
+                <p>
+                    JK Beautry Room tarjoaa saman katon alta kaiken mitä
+                    kauneuden hoitoon tarvitset hiusten leikkauksesta
+                    jalkojen hoitoon,
+                    <br /> yli 5 vuoden kokemuksella.
+                </p>
+            </div>
+        </div>
+        <div class="row justifyCenter">
+            <div class="col-md-10">
+                <h2>Tarjoamamme palvelut</h2>
+                <p>Meiltä löytyvät Parturi kampaamo, rakennekynnet, jalkahoidot
+                    sekä kesällä uutena tulossa kosmetologin palvelut.</p>
+            </div>
+            {{#each servicesCardList}}
+            <div class="col-md-4 col-lg-3 col-sm-6">
+                <a href="{{this.href}}">
+                    <div class="card">
+                        <picture class="card--picture">
+                            <img src="{{this.imageSrc}}" alt="{{this.imageAlt}}"
+                                loading="lazy" />
+                            <div class="card--picture__bg"></div>
+                        </picture>
+                        <article class="card--content">
+                            <h4>{{this.title}}</h4>
+                            <p>{{this.description}}</p>
+                        </article>
+                    </div>
+                </a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>

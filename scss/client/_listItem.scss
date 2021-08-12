@@ -1,0 +1,12 @@
+.list-group-item__container {
+	display: flex;
+	justify-content: space-between;
+	&__price {
+		color: $cgblue;
+		font-weight: 500;
+	}
+	small {
+		font-size: 0.7rem;
+		line-height: 2.5rem;
+	}
+}

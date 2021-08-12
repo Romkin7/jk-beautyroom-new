@@ -1,0 +1,37 @@
+<section class="hero hero--gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>{{title}}</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mainContent">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <h2>Kampaukset</h2>
+                {{#if subtitle}}
+                <p>{{subtitle}}</p>
+                {{/if}}
+            </div>
+            {{#each galleryItems}}
+            <div class="col-md-4 col-lg-3 col-sm-6">
+                <div class="galleryItem">
+                    {{#each this}}
+                    {{#if this.src}}
+                    <picture class="galleryItem--image">
+                        <img class="galleryItem--image__img"
+                            src="{{this.src}}" alt="{{this.alt}}"
+                            loading="lazy" />
+                    </picture>
+                    <p class="galleryItem--description">{{this.title}}</p>
+                    {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
