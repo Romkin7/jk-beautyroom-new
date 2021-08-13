@@ -2,10 +2,18 @@ const express = require('express');
 const router = express.Router();
 const Service = require('../../models/service');
 
-router.get('/', (req, res, next) => {
-    return res.render('index/index', {
-        title: 'JK Beauty Room',
-    });
+router.get('/', async(req, res, next) => {
+    try {
+        const specialOffers = await Service.find({ discount: true })
+            .limit(3)
+            return res.render('index/index', {
+                specialOffers,
+                specialOffersTitle: 'Tarjouksia',
+                title: 'JK Beauty Room',
+            });
+    } catch(error) {
+        return next(error);
+    }
 });
 
 router.get('/kampaamo', async (req, res, next) => {
@@ -13,7 +21,6 @@ router.get('/kampaamo', async (req, res, next) => {
         const haircutServices = await Service.find({
             category: 'haircutServices',
         }).sort({ price: 1 });
-        console.log(haircutServices);
         const hairColorServices = await Service.find({
             category: 'hairColorServices',
         }).sort({ price: 1 });
@@ -22,9 +29,10 @@ router.get('/kampaamo', async (req, res, next) => {
         }).sort({
             price: 1,
         });
-        return res.render('barber/index', {
+        return res.render('index/barber', {
             hairColorMixServices,
             hairColorServices,
+            specialOffers,
             haircutServices,
             haircutTitle: 'Parturi kampaamo palvelut',
             hairColorTitle: 'Värjäys',
@@ -41,7 +49,7 @@ router.get('/galleria', async(req, res, next) => {
          const galleryItems = await GalleryItem.find()
              .sort({ category: 1, createdAt: -1 })
              .limit(50);
-         return res.render('gallery/index', {
+         return res.render('index/galleria', {
              title: 'Galleria',
              subtitle: 'Ennen ja jälkeen',
              galleryItems,
@@ -56,7 +64,7 @@ router.get('/rakennekynnet', async (req, res, next) => {
         const nailServices = await Service.find({
             category: 'nailsServices',
         }).sort({ price: 1 });
-        return res.render('nails/index', {
+        return res.render('index/nails', {
             nailServices,
             nailsTitle: 'Kynnet',
             title: 'Rakennekynnet',
@@ -71,7 +79,7 @@ router.get('/jalkahoito', async (req, res, next) => {
         const footcareServices = await Service.find({
             category: 'footcareServices',
         }).sort({ price: 1 });
-        return res.render('footcare/index', {
+        return res.render('index/footcare', {
             footcareServices,
             footcareTitle: 'Jalkahoidot',
             title: 'Jalkahoito',

@@ -1,9 +1,8 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:
-    #0081a7 !important;">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
-            <img src="/images/logo-jk.png" alt="JK Beauty Room Tmi" />
+            <img src="/images/jk-dark-logo.svg" alt="JK Beauty Room Tmi" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarMenu"
@@ -12,16 +11,16 @@
             <span class="navbar-toggler-icon"></span>
             Menu
         </button>
-        <div class="collapse navbar-collapse" id="navbarMenu">
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarMenu">
             <ul class="navbar-nav">
                 {{#each navbarLinks}}
-                <li class="nav-item">
+                <li class="nav-item navbar--item">
                     {{#if this.ext}}
-                    <a href={{ this.url }} class="nav-link" target="__blank">
+                    <a href={{ this.url }} class="nav-link navbar--item--link" target="__blank">
                         {{ this.text }}
                     </a>
                     {{else}}
-                    <a class="nav-link" href={{ this.url }}>
+                    <a class="nav-link navbar--item--link" href={{ this.url }}>
                         {{ this.text }}
                     </a>
                     {{/if}}

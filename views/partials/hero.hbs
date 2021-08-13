@@ -1,0 +1,26 @@
+<section class="hero">
+    <div class="hero--container">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-4 hero--container--item
+                    hero--container--item__title">
+                    <h1>{{specialOffersTitle}}</h1>
+                </div>
+            </div>
+            <div class="row">
+                {{#each specialOffers}}
+                    <div class="col-md-4 hero--container--item">
+                        <a href="https://varaa.timma.fi/jkbeautyroom" target="__blank">
+                        {{#each this}}
+                        {{#if this.name}}
+                        <p class="hero--container--item--name">{{this.name}}</p>
+                        <h2 class="hero--container--item--price">{{this.discountedPrice}}€</h2>
+                        {{/if}}
+                        {{/each}}
+                        </a>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,26 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+$mainFont: 'Lora', serif;
+$bodyFont: 'Source Sans Pro', sans-serif;
+$heroAdsFont: 'Comfortaa', cursive;
 
-$robotoSlabFont: 'Roboto Slab', serif;
-$verdiris: #00afb9;
-$cgblue: #0081a7;
-$sky: #95c8d8;
-
-/** Grays */
-$gray200: #eeeeee;
-$gray300: #e8e8e8;
-$gray400: #cecece;
-$gray900: #434343;
-
-/** Black and white */
+/** Color Scheme */
 $white: #ffffff;
+$smoke: #E5E5E5;
 $black: #000000;
+$darkslategray: #023848;
+$teal: #0081A7;
+$lightseagreen: #219EBC;
+$darkorange: #F58300;
 
-/** Linear Gradients */
-$cgBlueToBottom: linear-gradient(to bottom, $cgblue, rgba($gray300, 0.6));
+/** text shadows */
+$textShadowDarkSlateGray: 0px 4px 20px $darkslategray;
+$textShadowDarkOrange: 0px 5px 15px #F58300;
 
-/** Borders */
-$grayBorder: 4px solid rgba(255, 255, 255, 0.5);
-$darkGrayBorder: 2px solid rgba($gray300, 0.8);
-
-/** Shadows */
-$softShadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
-$darkShadow: 0 0 8px 5px rgba(0, 0, 0, 0.3);
+/** Gradients */
+$gradientBlue: linear-gradient(180deg, $lightseagreen 0%, $darkslategray 100%);

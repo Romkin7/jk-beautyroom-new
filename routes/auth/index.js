@@ -9,7 +9,7 @@ const User = require('../../models/user');
 router
     .route('/login')
     .get(authObj.notLoggedIn, (req, res, next) => {
-        return res.render('auth/login', {
+        return res.render('admin/auth/login', {
             layout: 'adminLayout',
         });
     })
@@ -26,7 +26,7 @@ router
 router
     .route('/signup')
     .get(authObj.notLoggedIn, (req, res, next) => {
-        return res.render('auth/signup', {
+        return res.render('admin/auth/signup', {
             layout: 'adminLayout',
         });
     })

@@ -1,0 +1,13 @@
+.navbar {
+    height: 7.5rem;
+    background-color: $white;
+    &--item {
+        font-family: $mainFont;
+        &--link {
+            font-weight: 500;
+            font-size: 1.5rem;
+            line-height: 1.938rem;
+            color: $black !important;
+        }
+    }
+}

@@ -1,40 +1,50 @@
 .hero {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	height: 30rem;
-	background-image: url('../images/herobg.png');
-	background-image: $cgBlueToBottom, url('../images/herobg.png'); /* W3C */
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 50% 30%;
-	&--nails {
-		background-image: url('../images/nails_bg.png');
-		background-image: $cgBlueToBottom, url('../images/nails_bg.png'); /* W3C */
-		background-position: 50% 80%;
-	}
-	&--footcare {
-		background-image: url('../images/footcare_bg.png');
-		background-image: $cgBlueToBottom, url('../images/footcare_bg.png'); /* W3C */
-		background-position: 50% 90%;
-	}
-	&--barber {
-		background-image: url('../images/barber_bg.png');
-		background-image: $cgBlueToBottom, url('../images/barber_bg.png'); /* W3C */
-		background-position: 50% 90%;
-	}
-	&--gallery {
-		background-image: url('../images/gallery_bg.jpg');
-		background-image: $cgBlueToBottom, url('../images/gallery_bg.jpg'); /* W3C */
-		background-position: 50% 80%;
-	}
-	&--contact {
-		background-image: url('../images/contact_bg.jpg');
-		background-image: $cgBlueToBottom, url('../images/contact_bg.jpg'); /* W3C */
-		background-position: 50% 80%;
-	}
-	h1 {
-		color: $gray300;
-	}
+    color: $smoke;
+    height: 20.375rem;
+    background-image: url('/images/wall-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &--container {
+        height: inherit;
+        background-image: url('/images/orange-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.8;
+        &--item {
+            font-family: $heroAdsFont;
+            background: $gradientBlue;
+            text-align: center;
+            border-radius: 5px;
+            height: 15rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &__title {
+                height: 3.75rem;
+            }
+            &:first-child,
+            &:last-child,
+            &:first-child > *,
+            &:last-child > * {
+                transform: rotate(1.38deg);
+            }
+            &:nth-child(2),
+            &:nth-child(2) > * {
+                transform: rotate(-1.11deg);
+            }
+            &--name {
+                font-weight: bold;
+                font-size: 1.5rem;
+                line-height: 1.688rem;
+            }
+            &--price {
+                font-size: 3.125rem;
+                line-height: 3.5rem;
+                font-weight: bold;
+            }
+        }
+    }
 }

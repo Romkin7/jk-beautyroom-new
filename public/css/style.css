@@ -1,184 +1,120 @@
-/** Grays */
-/** Black and white */
-/** Linear Gradients */
-/** Borders */
-/** Shadows */
-.navbar {
-  padding: 0 2rem;
-  height: 5rem;
-  background-color: #0081a7; }
-  .navbar a {
-    color: #e8e8e8;
-    text-decoration: none; }
-  .navbar .navbar-toggler {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-  .navbar .navbar-collapse-open {
-    position: absolute;
-    padding: 2rem;
-    width: 80%;
-    top: 104px;
-    right: 44px;
-    background-color: #0081a7;
-    border: 4px solid rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
-    z-index: 100;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2); }
-  @media screen and (min-width: 992px) {
-    .navbar .navbar-toggler {
-      display: none; } }
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+/** Color Scheme */
+/** text shadows */
+/** Gradients */
+html, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Lora", serif; }
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  height: 30rem;
-  background-image: url("../images/herobg.png");
-  background-image: linear-gradient(to bottom, #0081a7, rgba(232, 232, 232, 0.6)), url("../images/herobg.png");
-  /* W3C */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 30%; }
-  .hero--nails {
-    background-image: url("../images/nails_bg.png");
-    background-image: linear-gradient(to bottom, #0081a7, rgba(232, 232, 232, 0.6)), url("../images/nails_bg.png");
-    /* W3C */
-    background-position: 50% 80%; }
-  .hero--footcare {
-    background-image: url("../images/footcare_bg.png");
-    background-image: linear-gradient(to bottom, #0081a7, rgba(232, 232, 232, 0.6)), url("../images/footcare_bg.png");
-    /* W3C */
-    background-position: 50% 90%; }
-  .hero--barber {
-    background-image: url("../images/barber_bg.png");
-    background-image: linear-gradient(to bottom, #0081a7, rgba(232, 232, 232, 0.6)), url("../images/barber_bg.png");
-    /* W3C */
-    background-position: 50% 90%; }
-  .hero--gallery {
-    background-image: url("../images/gallery_bg.jpg");
-    background-image: linear-gradient(to bottom, #0081a7, rgba(232, 232, 232, 0.6)), url("../images/gallery_bg.jpg");
-    /* W3C */
-    background-position: 50% 80%; }
-  .hero--contact {
-    background-image: url("../images/contact_bg.jpg");
-    background-image: linear-gradient(to bottom, #0081a7, rgba(232, 232, 232, 0.6)), url("../images/contact_bg.jpg");
-    /* W3C */
-    background-position: 50% 80%; }
-  .hero h1 {
-    color: #e8e8e8; }
+h1, h2, h3, h4, h5, h6, p, a, li {
+  color: inherit; }
 
-.list-group-item__container {
-  display: flex;
-  justify-content: space-between; }
-  .list-group-item__container__price {
-    color: #0081a7;
-    font-weight: 500; }
-  .list-group-item__container small {
-    font-size: 0.7rem;
-    line-height: 2.5rem; }
+a, a:visited, a:hover {
+  color: inherit;
+  text-decoration: none; }
 
-.galleryItem {
-  display: flex;
-  flex-direction: column; }
-  .galleryItem--image__img {
-    max-width: 100%; }
-  .galleryItem--description {
-    padding: 1rem; }
-
-.card {
-  border-radius: 8px;
-  margin-bottom: 2rem; }
-  .card:hover {
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2); }
-  .card--picture {
-    position: relative;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    display: flex;
-    width: 100%;
-    height: 100%; }
-    .card--picture img {
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
-      object-fit: cover;
-      width: 100%;
-      height: auto; }
-    .card--picture__bg {
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: transparent;
-      transition: 150ms background-color ease-in-out; }
-      .card--picture__bg:hover {
-        background-color: rgba(0, 129, 167, 0.8); }
-  .card--content {
-    border-left: 2px solid rgba(232, 232, 232, 0.8);
-    border-right: 2px solid rgba(232, 232, 232, 0.8);
-    border-bottom: 2px solid rgba(232, 232, 232, 0.8);
-    padding: 1rem; }
-    .card--content p {
-      color: #434343; }
-
-.contactInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-* {
-  box-sizing: border-box; }
+ul, ol {
+  list-style: none; }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto Slab", serif; }
+  height: 100%; }
 
-main {
-  position: relative;
-  min-height: 80vh;
-  width: 100%; }
+/** Sticke footer */
+.wrapper {
+  min-height: 100%;
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -24.75rem; }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  color: #0081a7; }
+.footer,
+.push {
+  height: 24.75rem; }
 
-a {
-  color: #0081a7;
-  text-decoration: none;
-  font-weight: 600; }
+.mainContent--row {
+  background-image: url("/images/lightblue-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px; }
+  .mainContent--row--content {
+    color: #ffffff; }
 
-.mainContent {
-  padding: 2rem; }
+.navbar {
+  height: 7.5rem;
+  background-color: #ffffff; }
+  .navbar--item {
+    font-family: "Lora", serif; }
+    .navbar--item--link {
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 1.938rem;
+      color: #000000 !important; }
 
-footer {
-  padding: 2rem 0;
-  position: relative;
-  min-height: 35vh;
-  width: 100%;
-  background-color: #e8e8e8; }
-  footer .list-group-item {
-    background-color: #e8e8e8;
-    border-bottom: none; }
-  footer p,
-  footer .list-group-item {
-    color: #434343; }
-  footer .iconContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center; }
-    footer .iconContainer--icon {
-      width: 4rem;
-      height: 4rem; }
-      footer .iconContainer--icon svg {
-        width: 4rem;
-        height: 4rem; }
+.hero {
+  color: #E5E5E5;
+  height: 20.375rem;
+  background-image: url("/images/wall-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .hero--container {
+    height: inherit;
+    background-image: url("/images/orange-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; }
+    .hero--container--item {
+      font-family: "Comfortaa", cursive;
+      background: linear-gradient(180deg, #219EBC 0%, #023848 100%);
+      text-align: center;
+      border-radius: 5px;
+      height: 15rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .hero--container--item__title {
+        height: 3.75rem; }
+      .hero--container--item:first-child, .hero--container--item:last-child,
+      .hero--container--item:first-child > *,
+      .hero--container--item:last-child > * {
+        transform: rotate(1.38deg); }
+      .hero--container--item:nth-child(2),
+      .hero--container--item:nth-child(2) > * {
+        transform: rotate(-1.11deg); }
+      .hero--container--item--name {
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 1.688rem; }
+      .hero--container--item--price {
+        font-size: 3.125rem;
+        line-height: 3.5rem;
+        font-weight: bold; }
+
+.card {
+  width: 95%;
+  padding: 2.188rem;
+  background: #ffffff;
+  height: auto; }
+  .card--picture img {
+    max-width: 100%; }
+
+.footer {
+  background-color: #023848;
+  color: #ffffff; }
+  .footer h4 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3.2rem; }
+  .footer li, .footer p, .footer address, .footer strong {
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.571rem;
+    font-family: "Source Sans Pro", sans-serif; }

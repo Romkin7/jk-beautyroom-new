@@ -6,7 +6,7 @@ const GalleryItem = require('../../models/galleryItem');
 const GalleryItemClass = require('../../classes/galleryItemClass');
 
 router.get('/new', (req, res) => {
-    return res.render('gallery/new', {
+    return res.render('admin/gallery/new', {
         layout: 'adminLayout',
     });
 });
@@ -16,7 +16,7 @@ router
     .get(async (req, res, next) => {
         try {
             const galleryItems = await GalleryItem.find();
-            return res.render('gallery/index', {
+            return res.render('admin/gallery/index', {
                 galleryItems,
                 layout: 'adminLayout',
             });
@@ -60,7 +60,7 @@ router
     .get(authObj.isLoggedIn, authObj.isAdmin, async (req, res, next) => {
         try {
             const galleryItem = await GalleryItem.findById(req.params.id);
-            return res.render('gallery/edit', {
+            return res.render('admin/gallery/edit', {
                 galleryItem,
                 layout: 'adminLayout',
             });

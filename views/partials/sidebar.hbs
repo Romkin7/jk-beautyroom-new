@@ -5,13 +5,24 @@
         </a>
         <h2>Hallintapaneeli</h2>
     </section>
-    {{#if user}}
     <ul class="nav flex-column adminPanelWrapper--sidebar--nav">
+        <li class="nav-item"><a href="/" class="nav-link">JK Beauty Room</a></li>
+        {{#if user}}
+        {{#each user}}
+        {{#if this.username}}
+        <li class="nav-item"><a href="/admin" class="nav-link">{{this.username}}</a></li>
+        {{/if}}
+        {{/each}}
+        <li class="nav-item"><a class="nav-link" href="/logout">Kirjaudu
+                ulos</a></li>
+        {{else}}
+        <li class="nav-item"><a class="nav-link" href="/signup">Liity</a></li>
+        <li class="nav-item"><a class="nav-link" href="/login">Kirjaudu</a></li>
+        {{/if}}
         {{#each sidebarLinks}}
         <li class="nav-item">
             <a class="nav-link" aria-current="page" href="{{this.url}}">{{this.text}}</a>
         </li>
         {{/each}}
     </ul>
-    {{/if}}
 </aside>

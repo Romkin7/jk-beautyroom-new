@@ -5,7 +5,7 @@ const Service = require('../../models/service');
 const authObj = require('../../middleware/authObj');
 
 router.get('/new', (req, res, next) => {
-    return res.render('services/new', {
+    return res.render('admin/services/new', {
         layout: 'adminLayout',
     });
 });
@@ -31,7 +31,7 @@ router
             const footcareServices = await Service.find({
                 category: 'footcareServices',
             }).sort({ price: 1 });
-            return res.render('services/', {
+            return res.render('admin/services/index', {
                 hairColorMixServices,
                 hairColorServices,
                 haircutServices,
@@ -73,7 +73,7 @@ router
     .get(authObj.isLoggedIn, authObj.isAdmin, async (req, res, next) => {
         try {
             const service = await Service.findById(req.params.id);
-            return res.render('services/edit', {
+            return res.render('admin/services/edit', {
                 service,
                 layout: 'adminLayout',
             });

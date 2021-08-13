@@ -1,20 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarMenu">
-            <ul class="navbar-nav">
-                {{#if user}}
-                {{#each user}}
-                <li class="nav-item"><a href="/admin" class="nav-link">{{this.username}}</a></li>
-                {{/each}}
-                <li class="nav-item"><a class="nav-link" href="/logout">Kirjaudu ulos</a></li>
-                {{else}}
-                <li class="nav-item"><a class="nav-link" href="/signup">Liity</a></li>
-                <li class="nav-item"><a class="nav-link" href="/login">Kirjaudu</a></li>
-                {{/if}}
-            </ul>
-        </div>
-    </div>
-</nav>
+
 {{#if success}}
 <div class="alert alert-success d-flex align-items-center alert-dismissible fade show" role="alert">
     <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"

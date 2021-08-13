@@ -7,7 +7,9 @@ a {
 .adminPanelWrapper {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap; }
+  flex-wrap: nowrap;
+  height: 54.313rem;
+  margin-bottom: 4.375rem; }
   .adminPanelWrapper--sidebar {
     color: #ffffff;
     width: 17.5rem;
@@ -28,10 +30,13 @@ a {
   .adminPanelWrapper--main {
     width: 100%; }
     .adminPanelWrapper--main main {
-      height: 88vh;
+      height: 54.313rem;
       overflow-y: scroll; }
+      .adminPanelWrapper--main main section.adminPanel {
+        height: inherit; }
   .adminPanelWrapper footer {
     padding: 0.5rem;
+    height: 4.375rem;
     background: linear-gradient(to bottom, #1c2330 0, #252f3e 100%);
     color: #ffffff; }
 
