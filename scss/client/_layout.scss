@@ -23,6 +23,12 @@ body {
     background-position: center;
     border-radius: 5px;
     &--content {
-      color: $white;
+        color: $darkslategray;
+        text-shadow: 0px 5px 15px $darkorange;
+        p {
+            font-weight: 600;
+            font-size: 1.35rem;
+            text-shadow: 0px 3px 20px $darkorange;
+        }
     }
 }

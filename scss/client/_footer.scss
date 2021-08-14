@@ -1,6 +1,9 @@
 .footer {
     background-color: $darkslategray;
     color: $white;
+    &--heart {
+        color: firebrick;
+    }
     h4 {
         font-weight: 700;
         font-size: 2.5rem;

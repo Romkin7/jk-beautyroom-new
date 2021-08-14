@@ -1,6 +1,24 @@
 .navbar {
     height: 7.5rem;
+    padding: 1.5rem 1.063rem;
     background-color: $white;
+    &--toggle {
+        position: relative;
+        z-index: 10;
+        top: 0rem;
+    }
+    &--brand {
+        position: relative;
+        width: 11.25rem;
+        height: 11.25rem;
+        top: 1.8rem;
+        &--img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+    }
     &--item {
         font-family: $mainFont;
         &--link {
