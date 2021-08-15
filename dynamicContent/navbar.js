@@ -58,5 +58,15 @@ module.exports.sidebarLinks = [
         id: 4,
         text: 'Kuvien hallinta',
         url: '/admin/galleryitems'
+    },
+    {
+        id: 5,
+        text: 'Lisää sisältöä',
+        url: '/admin/contents/new'
+    }, 
+    {
+        id: 6,
+        text: 'Sisällön hallinta',
+        url: '/admin/contents'
     }
 ];

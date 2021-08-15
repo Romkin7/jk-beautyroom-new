@@ -10,6 +10,12 @@ const userSchema = new Schema(
             required: true,
             trim: true,
         },
+        publicId: { type: String },
+        src: {
+            type: String,
+            required: true,
+        },
+        alt: { type: String, required: true, trim: true },
         email: { type: String, unique: true, required: true, trim: true },
         password: { type: String, required: true, trim: true },
         role: { type: String, required: true, default: 'basic' },
@@ -21,12 +27,12 @@ const userSchema = new Schema(
 );
 
 // Hash the password before saving it to the database
-userSchema.pre('save', function(next) {
+userSchema.pre('save', function (next) {
     var user = this;
     if (!user.isModified('password')) return next();
-    bcrypt.genSalt(10, function(err, salt) {
+    bcrypt.genSalt(10, function (err, salt) {
         if (err) return next(err);
-        bcrypt.hash(user.password, salt, function(err, hash) {
+        bcrypt.hash(user.password, salt, function (err, hash) {
             if (err) return next(err);
             user.password = hash;
             next();
@@ -35,7 +41,7 @@ userSchema.pre('save', function(next) {
 });
 
 //compare password in the database and the one that the user types in
-userSchema.methods.comparePassword = async function(password) {
+userSchema.methods.comparePassword = async function (password) {
     return await bcrypt.compare(password, this.password);
 };
 

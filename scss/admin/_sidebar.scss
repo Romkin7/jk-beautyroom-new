@@ -1,0 +1,23 @@
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #brand {
+        width: 8.2rem;
+        height: 8.2rem;
+        padding: 0.8rem;
+        border-top: 4px solid rgba($grayDark, 0.7);
+        position: relative;
+        top: -2rem;
+        border-radius: 50%;
+        img {
+            border-radius: 50%;
+            max-width: 100%;
+        }
+    }
+    .username {
+        position: relative;
+        top: -2rem;
+    }
+}

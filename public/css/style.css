@@ -111,6 +111,16 @@ body {
       line-height: 1.938rem;
       color: #000000 !important; }
 
+.galleryItem {
+  display: flex;
+  flex-direction: column; }
+  .galleryItem--picture {
+    display: block; }
+    .galleryItem--picture__img {
+      max-width: 100%; }
+  .galleryItem--description {
+    padding: 1rem; }
+
 .hero {
   color: #E5E5E5;
   height: 20.375rem;

@@ -9,6 +9,7 @@
         width: 17.5rem;
         height: 100vh;
         background: $gradientGray;
+        color: $white;
         &--header {
             padding: 1rem;
             h2 {
@@ -19,7 +20,9 @@
             background-color: rgba($grayDark, 0.7) !important;
             width: 100%;
             a,
-            a:visited {
+            a:visited,
+            a:hover {
+                font-size: 1.3rem;
                 color: $white !important;
             }
         }

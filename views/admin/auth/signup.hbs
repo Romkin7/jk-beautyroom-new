@@ -7,7 +7,7 @@
         </div>
         <div class="row d-flex justify-content-center align-center mt-3">
             <div class="col-md-6 col-sm-12">
-                <form action="/signup" method="POST">
+                <form action="/signup" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <label class="form-label" for="username">Username *</label>
                         <input type="text" id="username" name="username" class="form-control" />
@@ -15,6 +15,10 @@
                     <div class="form-group">
                         <label class="form-label" for="email">Email *</label>
                         <input type="email" id="email" name="email" class="form-control" />
+                    </div>
+                    <div class="form-gruop">
+                        <label class="form-label" for="image">Profiilikuva *</label>
+                        <input class="form-control" id="image" name="image" type="file" required />
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="password">Salasana *</label>

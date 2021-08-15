@@ -2,19 +2,20 @@
 {{> hero}}
 <section class="mainContent">
     <div class="container">
+        {{#if contents}}
+        {{#each contents}}
         <div class="row my-4 py-3 px-5 d-flex justify-content-center mainContent--row">
+            {{#each this}}
+            {{#if this.title}}
             <div class="col-md-12 mainContent--row--content">
-                <h2>JK Beauty Room - tietoa meistä</h2>
-                {{#if subtitle}}
-                <p>{{subtitle}}</p>
-                {{/if}}
-                <p>
-                    JK Beautry Room tarjoaa saman katon alta kaiken mitä
-                    kauneuden hoitoon tarvitset hiusten leikkauksesta
-                    jalkojen hoitoon, yli 5 vuoden kokemuksella.
-                </p>
+                <h2>{{this.title}}</h2>
+                {{{this.body}}}
             </div>
+            {{/if}}
+            {{/each}}
         </div>
+        {{/each}}
+        {{/if}}
         <div class="row d-flex my-4 py-3 px-5 mainContent--row">
             <div class="col-md-12 mainContent--row--content">
                 <h2>Tarjoamamme palvelut</h2>

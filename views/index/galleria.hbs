@@ -1,23 +1,54 @@
-<section class="hero hero--gallery">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <h1>{{title}}</h1>
-            </div>
-        </div>
-    </div>
-</section>
-<section className="mainContent">
-				<div className="container">
-					<div className="row">
-						<div className="col-md-10">
-							<h2>Kampaukset</h2>
-						</div>
-						{galleryItems && galleryItems.map((galleryItem) => {
-							return (<div className="col-md-4 col-lg-3 col-sm-6" key={galleryItem.id}>
-								<GalleryItem imageSrc={galleryItem.imageSrc} imageAlt={galleryItem.imageAlt} description={galleryItem.description} />
-							</div>)
-						})}
-					</div>
+<div style="display: none;"></div>
+{{> hero}}
+<section class="mainContent">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10">
+				<h2>Kampaukset</h2>
+			</div>
+		</div>
+		<div class="row my-3">
+			{{#each galleryItems}}
+			<div class="col-md-4 col-lg-3 col-sm-6">
+				<div class="galleryItem">
+					{{#each this}}
+					{{#if this.src}}
+					<picture class="galleryItem--picture">
+						<img class="galleryItem--picture__img"
+							src="{{this.src}}" alt="{{this.alt}}"
+							loading="lazy" />
+					</picture>
+					<p class="galleryItem--description">{{this.title}}</p>
+					{{/if}}
+					{{/each}}
 				</div>
-			</section>
+			</div>
+			{{/each}}
+		</div>
+		{{#if contents}}
+		{{#each contents}}
+		<div class="row">
+			{{#each this}}
+			{{#if this.title}}
+			<div class="col-sm-12">
+				<h3>{{this.title}}</h3>
+				{{{this.body}}}
+			</div>
+			<div class="col-md-4 col-lg-3 col-sm-6">
+				<div class="galleryItem">
+					<picture class="galleryItem--image">
+						<img class="galleryItem--image__img"
+							src="{{this.src}}"
+							alt="{{this.alt}}"
+							loading="lazy" />
+					</picture>
+					<p class="galleryItem--description">{{this.alt}}</p>
+				</div>
+			</div>
+			{{/if}}
+			{{/each}}
+		</div>
+		{{/each}}
+		{{/if}}
+	</div>
+</section>

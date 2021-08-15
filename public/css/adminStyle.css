@@ -1,5 +1,8 @@
-a {
-  text-decoration: none; }
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: inherit; }
 
 * {
   box-sizing: border-box; }
@@ -14,7 +17,8 @@ a {
     color: #ffffff;
     width: 17.5rem;
     height: 100vh;
-    background: linear-gradient(to bottom, #1c2330 0, #252f3e 100%); }
+    background: linear-gradient(to bottom, #1c2330 0, #252f3e 100%);
+    color: #ffffff; }
     .adminPanelWrapper--sidebar--header {
       padding: 1rem; }
       .adminPanelWrapper--sidebar--header h2 {
@@ -23,7 +27,9 @@ a {
       background-color: rgba(18, 18, 18, 0.7) !important;
       width: 100%; }
       .adminPanelWrapper--sidebar--nav a,
-      .adminPanelWrapper--sidebar--nav a:visited {
+      .adminPanelWrapper--sidebar--nav a:visited,
+      .adminPanelWrapper--sidebar--nav a:hover {
+        font-size: 1.3rem;
         color: #ffffff !important; }
   .adminPanelWrapper nav {
     box-shadow: 0 0 6px 6px rgba(28, 35, 48, 0.6); }
@@ -39,6 +45,26 @@ a {
     height: 4.375rem;
     background: linear-gradient(to bottom, #1c2330 0, #252f3e 100%);
     color: #ffffff; }
+
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .navbar-brand #brand {
+    width: 8.2rem;
+    height: 8.2rem;
+    padding: 0.8rem;
+    border-top: 4px solid rgba(18, 18, 18, 0.7);
+    position: relative;
+    top: -2rem;
+    border-radius: 50%; }
+    .navbar-brand #brand img {
+      border-radius: 50%;
+      max-width: 100%; }
+  .navbar-brand .username {
+    position: relative;
+    top: -2rem; }
 
 .galleryItem {
   display: flex;

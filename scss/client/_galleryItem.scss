@@ -1,0 +1,13 @@
+.galleryItem {
+	display: flex;
+	flex-direction: column;
+	&--picture {
+		display: block;
+		&__img {
+			max-width: 100%;
+		}
+	}
+	&--description {
+		padding: 1rem;
+	}
+}

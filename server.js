@@ -16,7 +16,7 @@ const methodOverRide = require('method-override');
 const exphbs = require('express-handlebars');
 
 /** Import internal lists */
-const { serviceCategories } = require('./dynamicContent/inputFields');
+const { serviceCategories, pageCategories } = require('./dynamicContent/inputFields');
 const { links, sidebarLinks } = require('./dynamicContent/navbar');
 const { servicesCardList } = require('./dynamicContent/servicesCardList');
 /** errorHandler */
@@ -27,6 +27,7 @@ const indexRoutes = require('./routes/index');
 const authRoutes = require('./routes/auth');
 const serviceRoutes = require('./routes/services');
 const galleryItemRoutes = require('./routes/gallery');
+const contentRoutes = require('./routes/content');
 const adminRoutes = require('./routes/admin');
 
 const app = express();
@@ -118,6 +119,7 @@ app.use(flash());
 /** Set global app locals */
 app.use((req, res, next) => {
     res.locals.servicesCardList = servicesCardList;
+    res.locals.pageCategories = pageCategories;
     res.locals.serviceCategories = serviceCategories;
     res.locals.sidebarLinks = sidebarLinks;
     res.locals.navbarLinks = links;
@@ -136,6 +138,7 @@ app.use('/', authRoutes);
 app.use('/admin', adminRoutes);
 app.use('/admin/services', serviceRoutes);
 app.use('/admin/galleryitems', galleryItemRoutes);
+app.use('/admin/contents', contentRoutes);
 //Not found 404 generic page
 app.get('*', function (req, res, next) {
     return res.redirect('/error404');

@@ -106,57 +106,30 @@
                 </article>
             </div>
         </div>
+        {{#if contents}}
+        {{#each contents}}
         <div class="row">
+            {{#each this}}
+            {{#if this.title}}
             <div class="col-sm-12">
-                <h3>Olaplex hoito - apua huonokuntoisille hiuksille!</h3>
-                <p>
-                    <strong>Mitä mahtaakaan olla Olaplex?</strong>
-                </p>
-                <p>
-                    Olaplex-salonkihoito on ainutlaatuinen hoitomenetelmä,
-                    jonka ansiosta voimme värjätä ja vaalentaa hiuksia
-                    rasittamatta niitä liikaa. Olaplexin hoitomenetelmän
-                    patentoitu ainesosa korjaa hiuksissa aikaisemmin
-                    syntyneitä vaurioita, estää uusien vaurioiden
-                    syntymistä, sekä hoitaa ja vahvistaa niitä. Tämän
-                    ansiosta
-                    hiukset voivat olla jopa paremmassa kunnossa värjäyksen
-                    jälkeen, kuin ennen värjäystä. Kyseessä ei
-                    kuitenkaan ole perinteinen hoitoaine. Voit ajatella,
-                    että Olaplex hoitaa hiusta sisäisesti, sillä tämä
-                    ihmeaine korjaa hiuksen rikkisiltoja. Hiukset joutuvat
-                    kestämään joskus kovia. Kemialliset käsittelyt,
-                    lämpölaitteiden käyttö, harjaaminen, suuret
-                    lämpötilavaihtelut ja kaikenlainen hankaaminen saa
-                    hiukset
-                    kaipaamaan vahvistusta. Mitä enemmän vahvistamme
-                    hiuksia, sitä enemmän ne kestävät. Jos esimerkiksi
-                    kasvatat
-                    hiuksia tai vaalennat niitä, on Olaplex mielestämme
-                    ehdoton lisä hiustenhoitorutiineihin. Suosittelemme
-                    varaamaan Olaplex-käsittelyn aina vähintään kemiallisten
-                    käsittelyiden, kuten värjäyksen yhteydessä. Hiukset
-                    pysyvät paremmassa kunnossa käsittelyistä huolimatta, ja
-                    näin ollen myös uusi väri säilyy kauniimpana
-                    pidempään. Jos haluat hemmotella itseäsi, voit varata
-                    Olaplex-salonkihoidon ja jatkaa hiusten hoitoa
-                    tekemällä ylläpitohoidon kotona kerran viikossa.
-                    Olaplex-hoitoa ja -tuotteita voidaan käyttää
-                    kaikenlaisiin
-                    hiuksiin.
-                </p>
+                <h3>{{this.title}}</h3>
+                {{{this.body}}}
             </div>
             <div class="col-md-4 col-lg-3 col-sm-6">
                 <div class="galleryItem">
                     <picture class="galleryItem--image">
                         <img class="galleryItem--image__img"
-                            src="{{galleryItem.imageSrc}}"
-                            alt="{{galleryItem.imageAlt}}"
+                            src="{{this.src}}"
+                            alt="{{this.alt}}"
                             loading="lazy" />
                     </picture>
-                    <p class="galleryItem--description">{{galleryItem.description}}</p>
+                    <p class="galleryItem--description">{{this.alt}}</p>
                 </div>
             </div>
+            {{/if}}
+            {{/each}}
         </div>
+        {{/each}}
+        {{/if}}
     </div>
 </section>
