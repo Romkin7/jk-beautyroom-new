@@ -91,7 +91,7 @@ body {
   .navbar--toggle {
     position: relative;
     z-index: 10;
-    top: 0rem; }
+    top: -4rem; }
   .navbar--brand {
     position: relative;
     width: 11.25rem;
@@ -109,6 +109,10 @@ body {
       font-size: 1.5rem;
       line-height: 1.938rem;
       color: #000000 !important; }
+  .navbar #menu-bar {
+    z-index: 12;
+    top: -4rem;
+    background-color: #ffffff; }
 
 .galleryItem {
   display: flex;
@@ -146,13 +150,6 @@ body {
       align-items: center; }
       .hero--container--item__title {
         height: 3.75rem; }
-      .hero--container--item:first-child, .hero--container--item:last-child,
-      .hero--container--item:first-child > *,
-      .hero--container--item:last-child > * {
-        transform: rotate(1.38deg); }
-      .hero--container--item:nth-child(2),
-      .hero--container--item:nth-child(2) > * {
-        transform: rotate(-1.11deg); }
       .hero--container--item--name {
         font-weight: bold;
         font-size: 1.5rem;
