@@ -1,24 +1,22 @@
 .navbar {
-    height: 7.5rem;
-    padding: 1.5rem 1.063rem;
+    height: 5rem;
     background-color: $white;
     &--toggle {
         position: relative;
         z-index: 10;
-        top: -4rem;
+        top: 1rem;
     }
     &--brand {
         position: relative;
-        width: 11.25rem;
-        height: 11.25rem;
-        top: 1.8rem;
+        width: 8rem;
+        height: 8rem;
+        top: 0.2rem;
         &--img {
             position: absolute;
             width: 100%;
             height: 100%;
             z-index: 10;
         }
-
     }
     &--item {
         font-family: $mainFont;
@@ -31,7 +29,27 @@
     }
     #menu-bar {
         z-index: 12;
-        top: -4rem;
+        width: 100%;
+        display: none;
+        top: orem;
         background-color: $white;
     }
+    @media screen and (min-width: 992px) {
+    //do Smth
+    height: 7.5rem;
+    padding: 1.5rem 1.063rem;
+    background-color: $white;
+    &--brand {
+        position: relative;
+        width: 11.25rem;
+        height: 11.25rem;
+        top: 1.8rem;
+        &--img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+    }
+  }
 }

@@ -3,35 +3,16 @@
     right: 0;
     z-index: 9;
     top: 27.938rem;
-    min-height: 22.188rem;
     width: 6.375rem;
     max-width: 6.375rem;
-    padding: 1.938rem 0;
+    padding: 1.3rem;
     border-radius: 5px;
     background-color: $teal;
     display: flex;
-    flex-direction: column;
-    justify-content:space-between;
+    justify-content: center;
     align-items: center;
     &--icon {
-        position: absolute;
-        z-index: 10;
-        bottom: 1.938rem;
-        width: 3.5rem;
-        height: 4rem;
-    }
-    &--phone {
-        position: relative;
-        top: 5.938rem;
-        z-index: 10;
-        font-family: $mainFont;
-        font-size: 2.5rem;
-        line-height: 3.188rem;
-        color: $white;
-        transform: rotate(-90deg);
-        margin-bottom: 2rem;
-        &:hover {
-            color: $white;
-        }
+        width: 4.5rem;
+        height: 5rem;
     }
 }
