@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
 const dburl =
-    process.env.NODE_ENV === 'production'
-        ? process.env.PROD_DATABASE
-        : process.env.DATABASE;
+    process.env.NODE_ENV !== 'production'
+        ? process.env.DATABASE
+        : process.env.MONGODB_URI;
 mongoose.Promise = Promise;
 
 //establish Connection
