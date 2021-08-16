@@ -1,4 +1,6 @@
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
 require('./dbConnection');
 const express = require('express');
 const passport = require('passport');
@@ -16,7 +18,10 @@ const methodOverRide = require('method-override');
 const exphbs = require('express-handlebars');
 
 /** Import internal lists */
-const { serviceCategories, pageCategories } = require('./dynamicContent/inputFields');
+const {
+    serviceCategories,
+    pageCategories,
+} = require('./dynamicContent/inputFields');
 const { links, sidebarLinks } = require('./dynamicContent/navbar');
 const { servicesCardList } = require('./dynamicContent/servicesCardList');
 /** errorHandler */
