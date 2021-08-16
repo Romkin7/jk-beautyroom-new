@@ -1,5 +1,5 @@
 .navbar {
-    height: 5rem;
+    height: 7rem;
     background-color: $white;
     &--toggle {
         position: relative;
@@ -7,8 +7,8 @@
         top: 0rem;
     }
     &--brand {
-        width: 8rem;
-        height: 8rem;
+        width: 6.5rem;
+        height: 6.5rem;
         &--img {
             width: 100%;
             height: 100%;
@@ -23,29 +23,32 @@
             color: $black !important;
         }
     }
-    #menu-bar {
+    #navbarMenu {
         z-index: 12;
         width: 100%;
-        display: none;
-        top: orem;
-        background-color: $white;
+        background-color: rgba($white, 0.7);
+        justify-content: center;
     }
     @media screen and (min-width: 992px) {
-    //do Smth
-    height: 7.5rem;
-    padding: 1.5rem 1.063rem;
-    background-color: $white;
-    &--brand {
-        position: relative;
-        width: 11.25rem;
-        height: 11.25rem;
-        top: 1.8rem;
-        &--img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 10;
+        //do Smth
+        height: 7.5rem;
+        padding: 1.5rem 1.063rem;
+        background-color: $white;
+        &--brand {
+            position: relative;
+            width: 11.25rem;
+            height: 11.25rem;
+            top: 1.8rem;
+            &--img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 10;
+            }
+        }
+        #navbarMenu {
+            display: flex;
+            justify-content: flex-end;
         }
     }
-  }
 }
