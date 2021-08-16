@@ -76,7 +76,7 @@ morgan((tokens, req, res) => {
 /** Set apps PORT & IP */
 app.set('trust proxy', true);
 app.set('port', process.env.PORT || 8080);
-app.set('ip', process.env.IP || '127.0.0.1');
+app.set('ip', process.env.IP || '0.0.0.0');
 //Headers
 // https://www.jkbeautyroom.fi
 //app.disable('x-powered-by');
