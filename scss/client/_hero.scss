@@ -1,13 +1,9 @@
 .hero {
     color: $smoke;
-    height: 20.375rem;
-    background-image: url('/images/wall-bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    height: 35rem;
     &--container {
         height: inherit;
-        background-image: url('/images/orange-bg.jpg');
+        background: $gradientBlue;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -35,6 +31,21 @@
                 line-height: 3.5rem;
                 font-weight: bold;
             }
+        }
+    }
+    @media screen and (min-width: 992px) {
+        //do Smth
+        height: 20.375rem;
+        background-image: url('/images/wall-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        &--container {
+            height: inherit;
+            background-image: url('/images/orange-bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
         }
     }
 }

@@ -78,17 +78,13 @@ body {
   .navbar--toggle {
     position: relative;
     z-index: 10;
-    top: 1rem; }
+    top: 0rem; }
   .navbar--brand {
-    position: relative;
     width: 8rem;
-    height: 8rem;
-    top: 0.2rem; }
+    height: 8rem; }
     .navbar--brand--img {
-      position: absolute;
       width: 100%;
-      height: 100%;
-      z-index: 10; }
+      height: 100%; }
   .navbar--item {
     font-family: "Lora", serif; }
     .navbar--item--link {
@@ -130,14 +126,10 @@ body {
 
 .hero {
   color: #E5E5E5;
-  height: 20.375rem;
-  background-image: url("/images/wall-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
+  height: 35rem; }
   .hero--container {
     height: inherit;
-    background-image: url("/images/orange-bg.jpg");
+    background: linear-gradient(180deg, #219EBC 0%, #023848 100%);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -162,6 +154,19 @@ body {
         font-size: 3.125rem;
         line-height: 3.5rem;
         font-weight: bold; }
+  @media screen and (min-width: 992px) {
+    .hero {
+      height: 20.375rem;
+      background-image: url("/images/wall-bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+      .hero--container {
+        height: inherit;
+        background-image: url("/images/orange-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; } }
 
 .card {
   width: 95%;
