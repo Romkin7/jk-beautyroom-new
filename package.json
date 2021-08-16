@@ -9,7 +9,6 @@
         "dev": "nodemon server.js",
         "prettier:test": "prettier --check \"**/**/*.js\"",
         "prettier:fix": "prettier --write \"**/**/*.js\"",
-        "postinstall": "./node_modules/bower/bin/bower install",
         "sass-watch": "node-sass scss/client/main.scss public/css/style.css -w",
         "adminsass-watch": "node-sass scss/admin/adminMain.scss public/css/adminStyle.css -w",
         "start:dev": "concurrently \"npm run dev\" \"npm run sass-watch\" \"npm run adminsass-watch\""
