@@ -41,7 +41,7 @@ router.get('/kampaamo', async (req, res, next) => {
             haircutTitle: 'Parturi kampaamo palvelut',
             hairColorTitle: 'Värjäys',
             hairColorMixTitle: 'Väripaketti',
-            title: 'Parturi - kampaamo palvelut',
+            title: 'Parturi - kampaamo',
         });
     } catch (error) {
         return next(error);
@@ -99,10 +99,16 @@ router.get('/jalkahoito', async (req, res, next) => {
     }
 });
 
-router.get('/yhteystiedot', (req, res) => {
-    return res.render('index/contact', {
-        title: 'Yhteystiedot',
-    });
+router.get('/yhteystiedot', async(req, res, next) => {
+    try {
+        const contents = await Content.find({ category: 'contactPage' });
+        return res.render('index/contact', {
+            contents,
+            title: 'Yhteystiedot',
+        });
+    } catch(error) {
+        return next(error);
+    }
 });
 
 module.exports = router;

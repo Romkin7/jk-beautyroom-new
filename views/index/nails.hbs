@@ -1,15 +1,8 @@
-<section class="hero hero--nails">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <h1>{{title}}</h1>
-            </div>
-        </div>
-    </div>
-</section>
+<div style="display: none;"></div>
+{{> hero}}
 <section class="mainContent">
     <div class="container">
-        <div class="row">
+        <div class="row my-5">
             <div class="col-md-10">
                 <h2>Rakennekynsien hinnasto</h2>
                 <p>Meiltä saatte rakennekynnet geelilakkauksella ja ilman ja
@@ -37,7 +30,7 @@
         </div>
         {{#if contents}}
 			{{#each contents}}
-			<div class="row">
+			<div class="row my-5">
 				{{#each this}}
 				{{#if this.title}}
 				<div class="col-sm-12">
@@ -46,8 +39,8 @@
 				</div>
 				<div class="col-md-4 col-lg-3 col-sm-6">
 					<div class="galleryItem">
-						<picture class="galleryItem--image">
-							<img class="galleryItem--image__img"
+						<picture class="galleryItem--picture">
+							<img class="galleryItem--picture__img"
 								src="{{this.src}}"
 								alt="{{this.alt}}"
 								loading="lazy" />

@@ -4,7 +4,7 @@
             <div class="col-md-6">
                  {{#each content}}
                 {{#if this.title}}
-                <h1>Muokkaa {{this.title}} kuvaa</h1>
+                <h1>Muokkaa "{{this.title}}" sisältöä</h1>
                 {{/if}}
                 {{/each}}
             </div>
@@ -20,28 +20,32 @@
                         <label for="category" class="form-label">Sivu *</label>
                         <select name="category" id="category"
                             class="form-control" required>
-                            <option value="">Valitse Sivu</option>
+                            {{#each content}}
+                            {{#if this.category}}
+                            <option value="{{this.category}}">{{this.category}}</option>
+                            {{/if}}
+                            {{/each}}
                             {{#each pageCategories}}
                             <option value={{this.value}}>{{this.name}}</option>
                             {{/each}}
                         </select>
                     </div>
+                    {{#each content}}
+                    {{#if this.title}}
                     <div class="form-group">
                         <label for="title" class="form-label">Otsikko *</label>
                         <input type="text" id="title" name="title"
-                            class="form-control" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="image" class="form-label">Kuva *</label>
-                        <input type="file" id="image" name="image" class="form-control" required />
+                            class="form-control" value={{this.title}} required />
                     </div>
                     <div class="form-group">
                         <label for="summernote" class="form-label">Sisältö *</label>
                         <textarea class="form-control" name="body"
-                            id="summernote" required></textarea>
+                            id="summernote" required>{{this.body}}</textarea>
                     </div>
+                    {{/if}}
+                    {{/each}}
                     <div class="form-group mt-3">
-                        <button type="submit" class="btn btn-success">Luo</button>
+                        <button type="submit" class="btn btn-success">Muokkaa</button>
                     </div>
                 </form>
             </div>

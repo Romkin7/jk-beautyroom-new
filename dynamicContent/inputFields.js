@@ -11,5 +11,6 @@ module.exports.pageCategories = [
     { value: 'barberPage', name: 'Parturi kampaamo sivu' },
     { value: 'galleryPage', name: 'galleria' },
     { value: 'footcarePage', name: 'Jalkahoito sivu' },
-    { value: 'nailsPage', name: 'Rakennekynis sivu' },
+    { value: 'nailsPage', name: 'Rakennekynsi sivu' },
+    { value: 'contactPage', name: 'Yhteystieto sivu' },
 ];

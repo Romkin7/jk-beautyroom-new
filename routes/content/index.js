@@ -15,7 +15,10 @@ router
     .route('/')
     .get(async (req, res, next) => {
         try {
-            const contents = await Content.find();
+            const contents = await Content.find().sort({
+                createdAt: -1,
+                category: 1,
+            });
             return res.render('admin/content/index', {
                 contents,
                 layout: 'adminLayout',
@@ -36,9 +39,7 @@ router
                     req.session.secureUrl,
                 ).filterContent();
                 if (contentClass.validateContent(contentClass)) {
-                    const content = await Content.create(
-                        contentClass,
-                    );
+                    const content = await Content.create(contentClass);
                     req.session.publicId = null;
                     req.session.secureUrl = null;
                     req.flash(
