@@ -122,7 +122,7 @@ body {
     z-index: 12;
     width: 100%;
     padding: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.93);
     justify-content: center; }
   @media screen and (min-width: 992px) {
     .navbar {
@@ -156,14 +156,15 @@ body {
 
 .hero {
   color: #E5E5E5;
-  height: 35rem; }
+  height: auto; }
   .hero--container {
     height: inherit;
     background-image: url("/images/orange-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    opacity: 0.8; }
+    opacity: 0.8;
+    padding: 1rem 0.5rem; }
     .hero--container--item {
       font-family: "Comfortaa", cursive;
       background: linear-gradient(180deg, #219EBC 0%, #023848 100%);

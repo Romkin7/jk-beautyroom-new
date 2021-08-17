@@ -1,6 +1,6 @@
 .hero {
     color: $smoke;
-    height: 35rem;
+    height: auto;
     &--container {
         height: inherit;
         background-image: url('/images/orange-bg.jpg');
@@ -8,6 +8,7 @@
         background-size: cover;
         background-position: center;
         opacity: 0.8;
+        padding: 1rem 0.5rem;
         &--item {
             font-family: $heroAdsFont;
             background: $gradientBlue;
