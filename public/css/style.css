@@ -121,7 +121,8 @@ body {
   .navbar #navbarMenu {
     z-index: 12;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
     justify-content: center; }
   @media screen and (min-width: 992px) {
     .navbar {
@@ -140,6 +141,7 @@ body {
           z-index: 10; }
       .navbar #navbarMenu {
         display: flex;
+        padding: 0;
         justify-content: flex-end; } }
 
 .galleryItem {
@@ -157,7 +159,7 @@ body {
   height: 35rem; }
   .hero--container {
     height: inherit;
-    background: linear-gradient(180deg, #219EBC 0%, #023848 100%);
+    background-image: url("/images/orange-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
