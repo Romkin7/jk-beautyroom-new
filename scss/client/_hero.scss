@@ -18,6 +18,16 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            &:first-child,
+            &:last-child,
+            &:first-child > *,
+            &:last-child > * {
+                transform: rotate(1.38deg);
+            }
+            &:nth-child(2),
+            &:nth-child(2) > * {
+                transform: rotate(-1.11deg);
+            }
             &__title {
                 height: 3.75rem;
             }

@@ -56,6 +56,18 @@ router
         },
     );
 
+router.get("/:id/editimage", async(req, res, next) => {
+    try {
+        const content = await Content.findById(req.params.id);
+        return res.render('admin/content/editImage', {
+            layout: 'adminLayout',
+            content
+        });
+    } catch(error) {
+        return next(error);
+    }
+})
+
 router
     .route('/:id')
     .get(authObj.isLoggedIn, authObj.isAdmin, async (req, res, next) => {
@@ -66,6 +78,29 @@ router
                 layout: 'adminLayout',
             });
         } catch (error) {
+            return next(error);
+        }
+    }).patch(authObj.isLoggedIn, authObj.isAdmin, cloudinary.uploadImage, async(req, res, next) => {
+        try {
+            const content = Content.findById(req.params.id);
+            const contentClass = new ContentClass(
+                content,
+                req.session.publicId,
+                req.session.secureUrl,
+            ).filterContent();
+            if (contentClass.validateContent(contentClass)) {
+                const updatedContent = await Content.findByIdAndUpdate(req.params.id, contentClass);
+                req.session.publicId = null;
+                req.session.secureUrl = null;
+                req.flash(
+                    'success',
+                    'Onnistui, sisältö "' +
+                        updatedContent.title +
+                        '" on onnistuneesti päivitetty!',
+                );
+                return res.redirect('/admin/contents');
+            }
+        } catch(error) {
             return next(error);
         }
     })

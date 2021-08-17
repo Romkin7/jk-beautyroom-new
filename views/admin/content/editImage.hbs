@@ -1,0 +1,31 @@
+<section>
+    <div class="container">
+        <div class="row my-5 d-flex justify-content-center">
+            <div class="col-md-6">
+                {{#each content}}
+                {{#if this.title}}
+                <h1>Muokkaa "{{this.title}}" sisällön kuvaa</h1>
+                {{/if}}
+                {{/each}}
+            </div>
+        </div>
+        <div class="row my-3 d-flex justify-content-center">
+            <div class="col-md-6">
+                {{#each content}}
+                {{#if this._id}}
+                <form action="/admin/contents/{{this._id}}?_method=PATCH" enctype="multipart/form-data"
+                    method="POST">
+                    {{/if}}
+                    {{/each}}
+                    <div class="form-group">
+                        <label for="image" class="form-label">Kuva *</label>
+                        <input type="file" id="image" name="image" class="form-control" required />
+                    </div>
+                    <div class="form-group mt-3">
+                        <button type="submit" class="btn btn-success">Muokkaa</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
