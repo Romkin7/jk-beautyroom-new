@@ -34,21 +34,30 @@ body {
 
 .footer,
 .push {
-  height: 80%; }
+  height: auto; }
 
-.mainContent--row {
-  border-radius: 5px; }
-  .mainContent--row__blue {
-    background-image: url("/images/lightblue-bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; }
-  .mainContent--row--content {
-    color: #0081A7; }
-    .mainContent--row--content p {
-      color: #023848;
-      font-weight: 600;
-      font-size: 1.35rem; }
+.mainContent {
+  position: relative; }
+  .mainContent .mainContent--row {
+    border-radius: 5px; }
+    .mainContent .mainContent--row__blue {
+      background-image: url("/images/lightblue-bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .mainContent .mainContent--row--content {
+      color: #0081A7; }
+      .mainContent .mainContent--row--content p {
+        color: #023848;
+        font-weight: 600;
+        font-size: 1.35rem; }
+  .mainContent .mainContent--bluesplash {
+    position: absolute;
+    width: 18.875rem;
+    height: 18.875rem;
+    z-index: 0;
+    top: 50%;
+    left: 36%; }
 
 @media screen and (min-width: 992px) {
   .footer,

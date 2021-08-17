@@ -13,24 +13,35 @@ body {
 
 .footer,
 .push {
-    height: 80%;
+    height: auto;
 }
 
-.mainContent--row {
-    border-radius: 5px;
-    &__blue {
-        background-image: url('/images/lightblue-bg.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-    &--content {
-        color: $teal;
-        p {
-            color: $darkslategray;
-            font-weight: 600;
-            font-size: 1.35rem;
+.mainContent {
+    position: relative;
+    .mainContent--row {
+        border-radius: 5px;
+        &__blue {
+            background-image: url('/images/lightblue-bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
         }
+        &--content {
+            color: $teal;
+            p {
+                color: $darkslategray;
+                font-weight: 600;
+                font-size: 1.35rem;
+            }
+        }
+    }
+    .mainContent--bluesplash {
+        position: absolute;
+        width: 18.875rem;
+        height: 18.875rem;
+        z-index: 0;
+        top: 50%;
+        left: 36%;
     }
 }
 
