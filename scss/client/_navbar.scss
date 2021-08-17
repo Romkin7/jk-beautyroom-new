@@ -26,7 +26,8 @@
     #navbarMenu {
         z-index: 12;
         width: 100%;
-        background-color: rgba($white, 0.7);
+        padding: 0.5rem;
+        background-color: rgba($white, 0.8);
         justify-content: center;
     }
     @media screen and (min-width: 992px) {
@@ -48,6 +49,7 @@
         }
         #navbarMenu {
             display: flex;
+            padding: 0;
             justify-content: flex-end;
         }
     }
