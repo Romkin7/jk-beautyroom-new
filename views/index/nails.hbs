@@ -15,13 +15,24 @@
                     <h3>{{nailsTitle}}</h3>
                     <ul class="list-group list-group-flush">
                         {{#each nailsServices}}
-                        <li class="list-group-item
+                         <li class="list-group-item
                             list-group-item__container">
+                            {{#each this}}
+                            {{#if this.name}}
                             <span>{{this.name}}</span>
-                            {{#if additional}}
+                            {{#if this.additional}}
                             <small>{{this.additional}}</small>
                             {{/if}}
-                            <span class="list-group-item__container__price">{{this.price}}</span>
+                            <span class="list-group-item__container__price">{{this.price}} € 
+                                {{#if this.secondPrice}}
+                                - {{this.secondPrice}} €
+                                {{/if}}
+                                {{#if this.hourlyPrice}}
+                                /h
+                                {{/if}}
+                            </span>
+                            {{/if}}
+                            {{/each}}
                         </li>
                         {{/each}}
                     </ul>
