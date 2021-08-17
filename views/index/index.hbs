@@ -18,7 +18,7 @@
         {{/if}}
         <div class="row d-flex my-4 py-3 px-5 mainContent--row mainContent--row__blue">
             {{#each servicesCardList}}
-            <div class="col-md-6 col-lg-6 col-sm-12 d-flex flex-column justify-content-center align-center">
+            <div class="col-md-6 col-lg-6 col-sm-12 d-flex flex-column justify-content-center align-center mainContent--card">
                 <a href="{{this.href}}">
                     <div class="card">
                         <picture class="card--picture">
@@ -33,7 +33,13 @@
                 </a>
             </div>
             {{/each}}
-            <div class="mainContent--bluesplash">
+            <div class="mainContent--card--pinkbrick">
+                <img src="/images/rectangle-pink.svg" alt="pink blur" />
+            </div>
+            <div class="mainContent--card--pinksplash">
+                <img src="/images/pink-side-blurred.svg" alt="pink blur" />
+            </div>
+            <div class="mainContent--card--bluesplash">
                 <img src="/images/splash-star.svg" alt="blue blur" />
             </div>
         </div>
