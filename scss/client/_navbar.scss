@@ -1,6 +1,6 @@
 .navbar {
     height: 7rem;
-    background-color: $white;
+    background-color: $cgblue;
     &--toggle {
         position: relative;
         z-index: 10;
@@ -20,21 +20,22 @@
             font-weight: 500;
             font-size: 1.5rem;
             line-height: 1.938rem;
-            color: $black !important;
+            color: $white !important;
         }
     }
     #navbarMenu {
         z-index: 12;
         width: 100%;
         padding: 0.5rem;
-        background-color: rgba($white, 0.93);
+        color: $white;
+        background-color: rgba($cgblue, 0.93);
         justify-content: center;
     }
     @media screen and (min-width: 992px) {
         //do Smth
         height: 7.5rem;
         padding: 1.5rem 1.063rem;
-        background-color: $white;
+        background-color: $cgblue;
         &--brand {
             position: relative;
             width: 11.25rem;
@@ -53,4 +54,10 @@
             justify-content: flex-end;
         }
     }
+}
+
+
+.navbar-light .navbar-toggler {
+    color: $white;
+    border-color: $white;
 }

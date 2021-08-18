@@ -1,14 +1,13 @@
 .hero {
     color: $smoke;
-    height: auto;
+    height:auto;
     border-bottom: 4px solid $lightseagreen;
+    background-image: $cgBlueToBottom, url('/images/pink-side-blurred.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     &--container {
         height: inherit;
-        background-image: $cgBlueToBottom, url('/images/pink-side-blurred.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        opacity: 0.8;
         padding: 1rem 0.5rem;
         &--item {
             font-family: $heroAdsFont;
@@ -27,7 +26,7 @@
     }
     @media screen and (min-width: 992px) {
         //do Smth
-        height: 12.375rem;
+        height: 9.375rem;
         background-image: $cgBlueToBottom, url('/images/pink-side-blurred.svg');
         background-repeat: no-repeat;
         background-size: cover;

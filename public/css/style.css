@@ -89,7 +89,7 @@ body {
 
 .navbar {
   height: 7rem;
-  background-color: #ffffff; }
+  background-color: #0081a7; }
   .navbar--toggle {
     position: relative;
     z-index: 10;
@@ -106,18 +106,19 @@ body {
       font-weight: 500;
       font-size: 1.5rem;
       line-height: 1.938rem;
-      color: #000000 !important; }
+      color: #ffffff !important; }
   .navbar #navbarMenu {
     z-index: 12;
     width: 100%;
     padding: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.93);
+    color: #ffffff;
+    background-color: rgba(0, 129, 167, 0.93);
     justify-content: center; }
   @media screen and (min-width: 992px) {
     .navbar {
       height: 7.5rem;
       padding: 1.5rem 1.063rem;
-      background-color: #ffffff; }
+      background-color: #0081a7; }
       .navbar--brand {
         position: relative;
         width: 11.25rem;
@@ -132,6 +133,10 @@ body {
         display: flex;
         padding: 0;
         justify-content: flex-end; } }
+
+.navbar-light .navbar-toggler {
+  color: #ffffff;
+  border-color: #ffffff; }
 
 .galleryItem {
   display: flex;
@@ -164,14 +169,13 @@ body {
 .hero {
   color: #E5E5E5;
   height: auto;
-  border-bottom: 4px solid #219EBC; }
+  border-bottom: 4px solid #219EBC;
+  background-image: linear-gradient(to bottom, #0081a7, rgba(232, 232, 232, 0.6)), url("/images/pink-side-blurred.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
   .hero--container {
     height: inherit;
-    background-image: linear-gradient(to bottom, #0081a7, rgba(232, 232, 232, 0.6)), url("/images/pink-side-blurred.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.8;
     padding: 1rem 0.5rem; }
     .hero--container--item {
       font-family: "Comfortaa", cursive;
@@ -187,7 +191,7 @@ body {
         height: 3.75rem; }
   @media screen and (min-width: 992px) {
     .hero {
-      height: 12.375rem;
+      height: 9.375rem;
       background-image: linear-gradient(to bottom, #0081a7, rgba(232, 232, 232, 0.6)), url("/images/pink-side-blurred.svg");
       background-repeat: no-repeat;
       background-size: cover;
