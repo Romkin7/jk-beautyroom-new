@@ -1,6 +1,6 @@
 <div style="display: none;"></div>
 {{> hero}}
-<section class="mainContent">
+<section class="footcare">
     <div class="container">
         <div class="row my-5 justifyCenter">
             <div class="col-md-10">
@@ -15,15 +15,18 @@
                     <h3>{{footcareTitle}}</h3>
                     <ul class="list-group list-group-flush">
                         {{#each footcareServices}}
-                         <li class="list-group-item
-                            list-group-item__container">
+                        <li class="list-group-item
+                            list-group__item">
                             {{#each this}}
                             {{#if this.name}}
-                            <span>{{this.name}}</span>
-                            {{#if this.additional}}
-                            <small>{{this.additional}}</small>
-                            {{/if}}
-                            <span class="list-group-item__container__price">{{this.price}} € 
+                            <div class="list-group__item--name">
+                                <span class="list-group__item--name--text">{{this.name}}</span>
+                                {{#if this.additional}}
+                                    <small>{{this.additional}}</small>
+                                {{/if}}
+                            </div>
+                            <span class="list-group__item__price">{{this.price}}
+                                €
                                 {{#if this.secondPrice}}
                                 - {{this.secondPrice}} €
                                 {{/if}}

@@ -38,16 +38,16 @@ body {
 
 .mainContent {
   position: relative; }
-  .mainContent .mainContent--row {
+  .mainContent--row {
     border-radius: 5px; }
-    .mainContent .mainContent--row__blue {
+    .mainContent--row__blue {
       background-image: url("/images/lightblue-bg.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center; }
-    .mainContent .mainContent--row--content {
+    .mainContent--row--content {
       color: #0081A7; }
-      .mainContent .mainContent--row--content p {
+      .mainContent--row--content p {
         color: #023848;
         font-weight: 600;
         font-size: 1.35rem; }
@@ -153,6 +153,25 @@ body {
       max-width: 100%; }
   .galleryItem--description {
     padding: 1rem; }
+
+.list-group__item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between; }
+  .list-group__item--name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    .list-group__item--name--text {
+      font-size: 1.2rem;
+      line-height: 1rem; }
+  .list-group__item__price {
+    background-color: #219EBC;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    font-size: 1.2rem; }
 
 .hero {
   color: #E5E5E5;

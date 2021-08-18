@@ -1,6 +1,6 @@
 <div style="display: none;"></div>
 {{> hero}}
-<section class="mainContent">
+<section class="barber">
     <div class="container">
         <div class="row my-5">
             <div class="col-md-10">
@@ -20,14 +20,17 @@
                     <ul class="list-group list-group-flush">
                         {{#each haircutServices}}
                         <li class="list-group-item
-                            list-group-item__container">
+                            list-group__item">
                             {{#each this}}
                             {{#if this.name}}
-                            <span>{{this.name}}</span>
-                            {{#if this.additional}}
-                            <small>{{this.additional}}</small>
-                            {{/if}}
-                            <span class="list-group-item__container__price">{{this.price}} € 
+                            <div class="list-group__item--name">
+                                <span class="list-group__item--name--text">{{this.name}}</span>
+                                {{#if this.additional}}
+                                    <small>{{this.additional}}</small>
+                                {{/if}}
+                            </div>
+                            <span class="list-group__item__price">{{this.price}}
+                                €
                                 {{#if this.secondPrice}}
                                 - {{this.secondPrice}} €
                                 {{/if}}
@@ -48,14 +51,17 @@
                     <ul class="list-group list-group-flush">
                         {{#each hairColorServices}}
                         <li class="list-group-item
-                            list-group-item__container">
+                            list-group__item">
                             {{#each this}}
                             {{#if this.name}}
-                            <span>{{this.name}}</span>
-                            {{#if this.additional}}
-                            <small>{{this.additional}}</small>
-                            {{/if}}
-                            <span class="list-group-item__container__price">{{this.price}} € 
+                            <div class="list-group__item--name">
+                                <span class="list-group__item--name--text">{{this.name}}</span>
+                                {{#if this.additional}}
+                                    <small>{{this.additional}}</small>
+                                {{/if}}
+                            </div>
+                            <span class="list-group__item__price">{{this.price}}
+                                €
                                 {{#if this.secondPrice}}
                                 - {{this.secondPrice}} €
                                 {{/if}}
@@ -73,17 +79,20 @@
             <div class="col-md-4">
                 <article>
                     <h3>{{hairColorMixTitle}}</h3>
-                     <ul class="list-group list-group-flush">
+                    <ul class="list-group list-group-flush">
                         {{#each hairColorMixServices}}
                         <li class="list-group-item
-                            list-group-item__container">
+                            list-group__item">
                             {{#each this}}
                             {{#if this.name}}
-                            <span>{{this.name}}</span>
-                            {{#if this.additional}}
-                            <small>{{this.additional}}</small>
-                            {{/if}}
-                            <span class="list-group-item__container__price">{{this.price}} € 
+                            <div class="list-group__item--name">
+                                <span class="list-group__item--name--text">{{this.name}}</span>
+                                {{#if this.additional}}
+                                    <small>{{this.additional}}</small>
+                                {{/if}}
+                            </div>
+                            <span class="list-group__item__price">{{this.price}}
+                                €
                                 {{#if this.secondPrice}}
                                 - {{this.secondPrice}} €
                                 {{/if}}
