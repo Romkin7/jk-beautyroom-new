@@ -6,13 +6,10 @@ const Content = require('../../models/content');
 
 router.get('/', async(req, res, next) => {
     try {
-        const specialOffers = await Service.find({ discount: true })
-            .limit(3);
         const contents = await Content.find({category: 'frontPage'});
             return res.render('index/index', {
-                specialOffers,
                 contents,
-                title: 'Tarjouksia',
+                title: 'JK Beauty Room',
             });
     } catch(error) {
         return next(error);

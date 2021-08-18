@@ -4,6 +4,10 @@
 /** Color Scheme */
 /** text shadows */
 /** Gradients */
+/** Grays */
+/** Linear Gradients */
+/** Borders */
+/** Shadows */
 html, body {
   padding: 0;
   margin: 0;
@@ -38,43 +42,19 @@ body {
 
 .mainContent {
   position: relative; }
+  .mainContent__blue {
+    background-image: rgba(255, 255, 255, 0.7), url("/images/lightblue-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
   .mainContent--row {
     border-radius: 5px; }
-    .mainContent--row__blue {
-      background-image: url("/images/lightblue-bg.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center; }
     .mainContent--row--content {
       color: #0081A7; }
       .mainContent--row--content p {
         color: #023848;
         font-weight: 600;
         font-size: 1.35rem; }
-  .mainContent--card {
-    position: relative;
-    z-index: 5; }
-    .mainContent--card--bluesplash {
-      position: absolute;
-      width: 18.875rem;
-      height: 18.875rem;
-      z-index: 0;
-      filter: blur(25px);
-      top: 50%;
-      left: 36%; }
-    .mainContent--card--pinksplash {
-      position: absolute;
-      z-index: 0;
-      filter: blur(25px);
-      top: 31.5%;
-      left: 7%; }
-    .mainContent--card--pinkbrick {
-      position: absolute;
-      z-index: 0;
-      filter: blur(25px);
-      border-radius: 50px;
-      top: 23%;
-      left: 63%; }
 
 @media screen and (min-width: 992px) {
   .footer,
@@ -86,23 +66,26 @@ body {
   right: 0;
   z-index: 9;
   top: 21.938rem;
-  width: 4.3rem;
-  max-width: 4.3rem;
+  width: 4.1rem;
+  max-width: 4.1rem;
   padding: 0.8rem;
   border-radius: 5px;
-  background-color: #0081A7;
+  background-color: #219EBC;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center; }
+  .phoneNumber a:nth-of-type(2) {
+    margin-top: 1rem; }
   .phoneNumber--icon {
     width: 4.5rem;
-    height: 5rem; }
+    height: 4.5rem; }
   @media screen and (min-width: 992px) {
     .phoneNumber {
       top: 27.938rem;
-      width: 6.375rem;
-      max-width: 6.375rem;
-      padding: 1.3rem; } }
+      width: 5.375rem;
+      max-width: 5.375rem;
+      padding: 1rem; } }
 
 .navbar {
   height: 7rem;
@@ -173,26 +156,18 @@ body {
       font-size: 1.2rem;
       line-height: 1rem; }
   .list-group--item--price {
-    background-color: #219EBC;
-    color: #ffffff;
+    color: #219EBC;
     padding: 0.5rem 1rem;
     border-radius: 50%;
     font-size: 1.2rem; }
-    .list-group--item--price__discount {
-      background-color: #F58300;
-      color: #ffffff;
-      padding: 0.5rem 1rem;
-      border-radius: 50%;
-      font-size: 1.2rem; }
-      .list-group--item--price__discount .normalPrice {
-        text-decoration: line-through; }
 
 .hero {
   color: #E5E5E5;
-  height: auto; }
+  height: auto;
+  border-bottom: 4px solid #219EBC; }
   .hero--container {
     height: inherit;
-    background-image: url("/images/orange-bg.jpg");
+    background-image: linear-gradient(to bottom, #0081a7, rgba(232, 232, 232, 0.6)), url("/images/pink-side-blurred.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -200,7 +175,7 @@ body {
     padding: 1rem 0.5rem; }
     .hero--container--item {
       font-family: "Comfortaa", cursive;
-      background: linear-gradient(180deg, #219EBC 0%, #023848 100%);
+      background: #219EBC;
       text-align: center;
       border-radius: 5px;
       height: 15rem;
@@ -208,36 +183,15 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center; }
-      .hero--container--item:first-child, .hero--container--item:last-child,
-      .hero--container--item:first-child > *,
-      .hero--container--item:last-child > * {
-        transform: rotate(1.38deg); }
-      .hero--container--item:nth-child(2),
-      .hero--container--item:nth-child(2) > * {
-        transform: rotate(-1.11deg); }
       .hero--container--item__title {
         height: 3.75rem; }
-      .hero--container--item--name {
-        font-weight: bold;
-        font-size: 1.5rem;
-        line-height: 1.688rem; }
-      .hero--container--item--price {
-        font-size: 3.125rem;
-        line-height: 3.5rem;
-        font-weight: bold; }
   @media screen and (min-width: 992px) {
     .hero {
-      height: 20.375rem;
-      background-image: url("/images/wall-bg.jpg");
+      height: 12.375rem;
+      background-image: linear-gradient(to bottom, #0081a7, rgba(232, 232, 232, 0.6)), url("/images/pink-side-blurred.svg");
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center; }
-      .hero--container {
-        height: inherit;
-        background-image: url("/images/orange-bg.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center; } }
+      background-position: center; } }
 
 .card {
   width: 95%;
@@ -248,7 +202,11 @@ body {
     max-width: 100%; }
 
 .footer {
-  background-color: #023848;
+  border-top: 4px solid #219EBC;
+  background-image: linear-gradient(to bottom, #0081a7, rgba(206, 206, 206, 0.6)), url("/images/pink-side-blurred.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: #ffffff; }
   .footer--heart {
     color: firebrick; }
@@ -256,7 +214,10 @@ body {
     font-weight: 700;
     font-size: 2.5rem;
     line-height: 3.2rem; }
-  .footer li, .footer p, .footer address, .footer strong {
+  .footer li,
+  .footer p,
+  .footer address,
+  .footer strong {
     font-weight: 700;
     font-size: 1.25rem;
     line-height: 1.571rem;

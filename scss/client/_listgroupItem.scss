@@ -14,21 +14,10 @@
             }
         }
         &--price {
-            background-color: $lightseagreen;
-            color: $white;
+            color: $lightseagreen;
             padding: 0.5rem 1rem;
             border-radius: 50%;
             font-size: 1.2rem;
-            &__discount {
-                background-color: $darkorange;
-                color: $white;
-                padding: 0.5rem 1rem;
-                border-radius: 50%;
-                font-size: 1.2rem;
-                .normalPrice {
-                    text-decoration: line-through;
-                }
-            }
         }
     }
 }

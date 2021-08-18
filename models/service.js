@@ -15,8 +15,6 @@ const serviceSchema = new Schema(
         secondPrice: {
             type: Number,
         },
-        discountedPrice: { type: Number },
-        discount: { type: Boolean, default: false },
         hourlyPrice: { type: Boolean, default: false },
         category: {
             type: String,

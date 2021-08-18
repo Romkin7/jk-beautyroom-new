@@ -7,20 +7,6 @@
                     <h1>{{title}}</h1>
                 </div>
             </div>
-            <div class="row d-flex justify-content-center">
-                {{#each specialOffers}}
-                    <div class="col-6 col-md-4 mb-2 hero--container--item">
-                        <a href="https://varaa.timma.fi/jkbeautyroom" target="__blank">
-                        {{#each this}}
-                        {{#if this.name}}
-                        <p class="hero--container--item--name">{{this.name}}</p>
-                        <h2 class="hero--container--item--price">{{this.discountedPrice}}€</h2>
-                        {{/if}}
-                        {{/each}}
-                        </a>
-                    </div>
-                {{/each}}
-            </div>
         </div>
     </div>
 </section>

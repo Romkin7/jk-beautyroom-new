@@ -21,3 +21,29 @@ $textShadowDarkOrange: 0px 5px 15px #F58300;
 
 /** Gradients */
 $gradientBlue: linear-gradient(180deg, $lightseagreen 0%, $darkslategray 100%);
+
+
+$robotoSlabFont: 'Roboto Slab', serif;
+$verdiris: #00afb9;
+$cgblue: #0081a7;
+$sky: #95c8d8;
+
+/** Grays */
+$gray200: #eeeeee;
+$gray300: #e8e8e8;
+$gray400: #cecece;
+$gray900: #434343;
+
+
+/** Linear Gradients */
+$cgBlueToBottom: linear-gradient(to bottom, $cgblue, rgba($gray300, 0.6));
+$cgBlueToBottomFooter: linear-gradient(to bottom, $cgblue, rgba($gray400, 0.6));
+
+
+/** Borders */
+$grayBorder: 4px solid rgba(255, 255, 255, 0.5);
+$darkGrayBorder: 2px solid rgba($gray300, 0.8);
+
+/** Shadows */
+$softShadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+$darkShadow: 0 0 8px 5px rgba(0, 0, 0, 0.3);

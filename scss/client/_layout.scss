@@ -18,14 +18,14 @@ body {
 
 .mainContent {
     position: relative;
+    &__blue {
+        background-image: rgba($white, 0.7), url('/images/lightblue-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
     &--row {
         border-radius: 5px;
-        &__blue {
-            background-image: url('/images/lightblue-bg.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-        }
         &--content {
             color: $teal;
             p {
@@ -33,34 +33,6 @@ body {
                 font-weight: 600;
                 font-size: 1.35rem;
             }
-        }
-    }
-    &--card {
-        position: relative;
-        z-index: 5;
-        &--bluesplash {
-            position: absolute;
-            width: 18.875rem;
-            height: 18.875rem;
-            z-index: 0;
-            filter: blur(25px);
-            top: 50%;
-            left: 36%;
-        }
-        &--pinksplash {
-            position: absolute;
-            z-index: 0;
-            filter: blur(25px);
-            top: 31.5%;
-            left: 7%;
-        }
-        &--pinkbrick {
-            position: absolute;
-            z-index: 0;
-            filter: blur(25px);
-            border-radius: 50px;
-            top: 23%;
-            left: 63%;
         }
     }
 }

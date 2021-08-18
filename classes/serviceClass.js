@@ -4,8 +4,6 @@ module.exports = class ServiceClass {
         this.additional = data.additional || undefined;
         this.price = data.price || undefined;
         this.secondPrice = data.secondPrice || undefined;
-        this.discountedPrice = data.discountedPrice || undefined;
-        this.discount = data.discountedPrice ? true : false;
         this.hourlyPrice = data.hourlyPrice ? true : false;
         this.category = data.category || undefined;
     }

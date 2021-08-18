@@ -1,9 +1,10 @@
 .hero {
     color: $smoke;
     height: auto;
+    border-bottom: 4px solid $lightseagreen;
     &--container {
         height: inherit;
-        background-image: url('/images/orange-bg.jpg');
+        background-image: $cgBlueToBottom, url('/images/pink-side-blurred.svg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -11,7 +12,7 @@
         padding: 1rem 0.5rem;
         &--item {
             font-family: $heroAdsFont;
-            background: $gradientBlue;
+            background: $lightseagreen;
             text-align: center;
             border-radius: 5px;
             height: 15rem;
@@ -19,44 +20,17 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            &:first-child,
-            &:last-child,
-            &:first-child > *,
-            &:last-child > * {
-                transform: rotate(1.38deg);
-            }
-            &:nth-child(2),
-            &:nth-child(2) > * {
-                transform: rotate(-1.11deg);
-            }
             &__title {
                 height: 3.75rem;
-            }
-            &--name {
-                font-weight: bold;
-                font-size: 1.5rem;
-                line-height: 1.688rem;
-            }
-            &--price {
-                font-size: 3.125rem;
-                line-height: 3.5rem;
-                font-weight: bold;
             }
         }
     }
     @media screen and (min-width: 992px) {
         //do Smth
-        height: 20.375rem;
-        background-image: url('/images/wall-bg.jpg');
+        height: 12.375rem;
+        background-image: $cgBlueToBottom, url('/images/pink-side-blurred.svg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        &--container {
-            height: inherit;
-            background-image: url('/images/orange-bg.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-        }
     }
 }
