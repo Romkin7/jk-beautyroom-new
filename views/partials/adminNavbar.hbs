@@ -1,41 +1,63 @@
-
+<!-- As a link -->
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <button class="btn btn-dark" type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample"
+            aria-controls="offcanvasExample">
+            Menu
+        </button>
+        <a class="navbar-brand" href="/">JK Beauty Room</a>
+        {{#if user}}
+        <a class="navbar-brand" href="/admin">Hallintapaneeli</a>
+        {{/if}}
+    </div>
+</nav>
 {{#if success}}
-<div class="alert alert-success d-flex align-items-center alert-dismissible fade show" role="alert">
+<div class="alert alert-success d-flex align-items-center alert-dismissible fade
+    show" role="alert">
     <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
         aria-label="Success:"><use xlink:href="#check-circle-fill"></svg>
         <div>
             {{success}}
         </div>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="alert"
+            aria-label="Close"></button>
     </div>
-{{else if warning}}
-    <div class="alert alert-warning d-flex align-items-center alert-dismissible fade show" role="alert">
+    {{else if warning}}
+    <div class="alert alert-warning d-flex align-items-center alert-dismissible
+        fade show" role="alert">
         <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
             aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"></svg>
-        <div>
-            {{warning}}
+            <div>
+                {{warning}}
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                aria-label="Close"></button>
         </div>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-{{else if info}}
-    <div class="alert alert-primary d-flex align-items-center alert-dismissible fade show" role="alert">
-        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
-            aria-label="Info:"><use xlink:href="#info-fill"></svg>
-        <div>
-            {{info}}
-        </div>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-{{else if error}}
-    <div class="alert alert-danger d-flex align-items-center alert-dismissible fade show"
+        {{else if info}}
+        <div class="alert alert-primary d-flex align-items-center
+            alert-dismissible fade show" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                aria-label="Info:"><use xlink:href="#info-fill"></svg>
+                <div>
+                    {{info}}
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+            </div>
+            {{else if error}}
+            <div class="alert alert-danger d-flex align-items-center
+                alert-dismissible fade show"
                 role="alert">
-        <svg class="bi flex-shrink-0 me-2" width="24" height="24"
+                <svg class="bi flex-shrink-0 me-2" width="24" height="24"
                     role="img" aria-label="Danger:"><use
-            xlink:href="#exclamation-triangle-fill"></svg>
-        <div>
-            {{error}}
-        </div>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-{{else}}
-{{/if}}
+                        xlink:href="#exclamation-triangle-fill"></svg>
+                    <div>
+                        {{error}}
+                    </div>
+                    <button type="button" class="btn-close"
+                        data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {{else}}
+                {{/if}}

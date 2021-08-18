@@ -1,34 +1,45 @@
-<aside class="adminPanelWrapper--sidebar">
-    <section class="adminPanelWrapper--sidebar--header d-flex flex-column my-3
-        justify-content-center align-center">
-        <h3><a href="/">JK Beauty Room</a></h3>
-        <h4>Hallintapaneeli</h4>
-    </section>
-    <ul class="nav flex-column adminPanelWrapper--sidebar--nav">
-        {{#if user}}
-        {{#each user}}
-        {{#if this.username}}
-        <a class="navbar-brand" href="/admin">
-            <picture id="brand">
-                <img src="{{this.src}}" alt="{{this.alt}}"
-                    title="{{this.username}}"
-                    />
-            </picture>
-            <span class="username">{{this.username}}</span>
-        </a>
-        {{/if}}
-        {{/each}}
-        {{#each sidebarLinks}}
-        <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="{{this.url}}">{{this.text}}</a>
-        </li>
-        {{/each}}
-        <hr />
-        <li class="nav-item"><a class="nav-link" href="/logout">Kirjaudu
-                ulos</a></li>
-        {{else}}
-        <li class="nav-item"><a class="nav-link" href="/signup">Liity</a></li>
-        <li class="nav-item"><a class="nav-link" href="/login">Kirjaudu</a></li>
-        {{/if}}
-    </ul>
-</aside>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h3 class="offcanvas-title" id="offcanvasExampleLabel"><a href="/">JK
+                Beauty Room</a></h3>
+        <button type="button" class="btn-close text-reset"
+            data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <aside class="adminPanelWrapper--sidebar">
+            <section class="adminPanelWrapper--sidebar--header d-flex
+                flex-column my-3
+                justify-content-center align-center">
+                <h4>Hallintapaneeli</h4>
+            </section>
+            <ul class="nav flex-column adminPanelWrapper--sidebar--nav">
+                {{#if user}}
+                {{#each user}}
+                {{#if this.username}}
+                <a class="navbar-brand" href="/admin">
+                    <picture id="brand">
+                        <img src="{{this.src}}" alt="{{this.alt}}"
+                            title="{{this.username}}"
+                            />
+                    </picture>
+                    <span class="username">{{this.username}}</span>
+                </a>
+                {{/if}}
+                {{/each}}
+                {{#each sidebarLinks}}
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{{this.url}}">{{this.text}}</a>
+                </li>
+                {{/each}}
+                <hr />
+                <li class="nav-item"><a class="nav-link" href="/logout">Kirjaudu
+                        ulos</a></li>
+                {{else}}
+                <li class="nav-item"><a class="nav-link" href="/signup">Liity</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login">Kirjaudu</a></li>
+                {{/if}}
+            </ul>
+        </aside>
+    </div>
+</div>
