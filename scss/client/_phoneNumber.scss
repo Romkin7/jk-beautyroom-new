@@ -2,10 +2,10 @@
     position: fixed;
     right: 0;
     z-index: 9;
-    top: 27.938rem;
-    width: 6.375rem;
-    max-width: 6.375rem;
-    padding: 1.3rem;
+    top: 21.938rem;
+    width: 4.3rem;
+    max-width: 4.3rem;
+    padding: 0.8rem;
     border-radius: 5px;
     background-color: $teal;
     display: flex;
@@ -14,5 +14,12 @@
     &--icon {
         width: 4.5rem;
         height: 5rem;
+    }
+    @media screen and (min-width: 992px) {
+        //do Smth
+        top: 27.938rem;
+        width: 6.375rem;
+        max-width: 6.375rem;
+        padding: 1.3rem;
     }
 }

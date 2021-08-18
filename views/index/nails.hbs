@@ -22,10 +22,18 @@
                             <div class="list-group__item--name">
                                 <span class="list-group__item--name--text">{{this.name}}</span>
                                 {{#if this.additional}}
-                                    <small>{{this.additional}}</small>
+                                <small>{{this.additional}}</small>
                                 {{/if}}
                             </div>
-                            <span class="list-group__item__price">{{this.price}}
+                            {{#if this.discountedPrice}}
+                            <span class="list-group__item--price__discount">
+                                <small class="normalPrice">{{this.price}}
+                                    €</small>
+
+                                {{this.discountedPrice}} €
+                            </span>
+                            {{else}}
+                            <span class="list-group__item--price">{{this.price}}
                                 €
                                 {{#if this.secondPrice}}
                                 - {{this.secondPrice}} €
@@ -34,6 +42,7 @@
                                 /h
                                 {{/if}}
                             </span>
+                            {{/if}}
                             {{/if}}
                             {{/each}}
                         </li>
