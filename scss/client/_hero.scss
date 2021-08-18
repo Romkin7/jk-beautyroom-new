@@ -14,13 +14,12 @@
             background: $lightseagreen;
             text-align: center;
             border-radius: 5px;
-            height: 15rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             &__title {
-                height: 3.75rem;
+                height: auto;
             }
         }
     }

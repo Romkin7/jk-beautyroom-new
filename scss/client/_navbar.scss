@@ -17,9 +17,6 @@
     &--item {
         font-family: $mainFont;
         &--link {
-            font-weight: 500;
-            font-size: 1.5rem;
-            line-height: 1.938rem;
             color: $white !important;
         }
     }
@@ -31,7 +28,7 @@
         background-color: rgba($cgblue, 0.93);
         justify-content: center;
     }
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 1224px) {
         //do Smth
         height: 7.5rem;
         padding: 1.5rem 1.063rem;
@@ -48,6 +45,15 @@
                 z-index: 10;
             }
         }
+        &--item {
+            font-family: $mainFont;
+            &--link {
+                font-weight: 500;
+                font-size: 1.5rem;
+                line-height: 1.938rem;
+                color: $white !important;
+            }
+        }
         #navbarMenu {
             display: flex;
             padding: 0;
@@ -55,7 +61,6 @@
         }
     }
 }
-
 
 .navbar-light .navbar-toggler {
     color: $white;
