@@ -48,7 +48,7 @@ router.get('/kampaamo', async (req, res, next) => {
 router.get('/galleria', async (req, res, next) => {
     try {
         const galleryItems = await GalleryItem.find()
-            .sort({ category: 1, createdAt: -1 })
+            .sort({ createdAt: -1 })
             .limit(50);
         const contents = await Content.find({ category: 'galleryPage' }).sort({
             createdAt: -1,
