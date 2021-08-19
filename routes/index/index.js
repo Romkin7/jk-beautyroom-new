@@ -64,12 +64,12 @@ router.get('/galleria', async(req, res, next) => {
 
 router.get('/rakennekynnet', async (req, res, next) => {
     try {
-        const nailServices = await Service.find({
+        const nailsServices = await Service.find({
             category: 'nailsServices',
         }).sort({ price: 1 });
         const contents = await Content.find({ category: 'nailsPage' });
         return res.render('index/nails', {
-            nailServices,
+            nailsServices,
             contents,
             nailsTitle: 'Kynnet',
             title: 'Rakennekynnet',
