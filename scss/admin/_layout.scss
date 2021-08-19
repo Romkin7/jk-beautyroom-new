@@ -32,7 +32,8 @@
     &--main {
         width: 100%;
         main {
-            height: 54.313rem;
+            min-height: 54.313rem;
+            height: auto;
             overflow-y: scroll;
             section.adminPanel {
                 height: inherit;

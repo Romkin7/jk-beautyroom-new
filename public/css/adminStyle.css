@@ -35,7 +35,8 @@ a:hover {
   .adminPanelWrapper--main {
     width: 100%; }
     .adminPanelWrapper--main main {
-      height: 54.313rem;
+      min-height: 54.313rem;
+      height: auto;
       overflow-y: scroll; }
       .adminPanelWrapper--main main section.adminPanel {
         height: inherit; }
