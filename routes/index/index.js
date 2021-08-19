@@ -20,14 +20,14 @@ router.get('/kampaamo', async (req, res, next) => {
     try {
         const haircutServices = await Service.find({
             category: 'haircutServices',
-        }).sort({ price: 1 });
+        }).sort({ createdAt: 1 });
         const hairColorServices = await Service.find({
             category: 'hairColorServices',
-        }).sort({ price: 1 });
+        }).sort({ createdAt: 1 });
         const hairColorMixServices = await Service.find({
             category: 'hairColorMixServices',
         }).sort({
-            price: 1,
+            createdAt: 1,
         });
         const contents = await Content.find({category: 'barberPage'});
         return res.render('index/barber', {
