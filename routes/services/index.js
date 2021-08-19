@@ -25,7 +25,7 @@ router
             }).sort({
                 price: 1,
             });
-            const nailServices = await Service.find({
+            const nailsServices = await Service.find({
                 category: 'nailsServices',
             }).sort({ price: 1 });
             const footcareServices = await Service.find({
@@ -35,7 +35,7 @@ router
                 hairColorMixServices,
                 hairColorServices,
                 haircutServices,
-                nailServices,
+                nailsServices,
                 footcareServices,
                 title: 'Palveluiden hallinta',
                 layout: 'adminLayout',

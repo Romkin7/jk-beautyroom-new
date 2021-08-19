@@ -4,14 +4,14 @@ const Service = require('../../models/service');
 const GalleryItem = require('../../models/galleryItem');
 const Content = require('../../models/content');
 
-router.get('/', async(req, res, next) => {
+router.get('/', async (req, res, next) => {
     try {
-        const contents = await Content.find({category: 'frontPage'});
-            return res.render('index/index', {
-                contents,
-                title: 'JK Beauty Room',
-            });
-    } catch(error) {
+        const contents = await Content.find({ category: 'frontPage' });
+        return res.render('index/index', {
+            contents,
+            title: 'JK Beauty Room',
+        });
+    } catch (error) {
         return next(error);
     }
 });
@@ -29,7 +29,7 @@ router.get('/kampaamo', async (req, res, next) => {
         }).sort({
             createdAt: 1,
         });
-        const contents = await Content.find({category: 'barberPage'});
+        const contents = await Content.find({ category: 'barberPage' });
         return res.render('index/barber', {
             hairColorMixServices,
             hairColorServices,
@@ -45,22 +45,24 @@ router.get('/kampaamo', async (req, res, next) => {
     }
 });
 
-router.get('/galleria', async(req, res, next) => {
+router.get('/galleria', async (req, res, next) => {
     try {
-         const galleryItems = await GalleryItem.find()
-             .sort({ category: 1, createdAt: -1 })
-             .limit(50);
-        const contents = await Content.find({category: 'galleryPage'});
-         return res.render('index/galleria', {
-             contents,
-             title: 'Galleria',
-             subtitle: 'Ennen ja jälkeen',
-             galleryItems,
-         });
-    } catch(error) {
+        const galleryItems = await GalleryItem.find()
+            .sort({ category: 1, createdAt: -1 })
+            .limit(50);
+        const contents = await Content.find({ category: 'galleryPage' }).sort({
+            createdAt: -1,
+        });
+        return res.render('index/galleria', {
+            contents,
+            title: 'Galleria',
+            subtitle: 'Ennen ja jälkeen',
+            galleryItems,
+        });
+    } catch (error) {
         return next(error);
     }
-})
+});
 
 router.get('/rakennekynnet', async (req, res, next) => {
     try {
@@ -96,14 +98,14 @@ router.get('/jalkahoito', async (req, res, next) => {
     }
 });
 
-router.get('/yhteystiedot', async(req, res, next) => {
+router.get('/yhteystiedot', async (req, res, next) => {
     try {
         const contents = await Content.find({ category: 'contactPage' });
         return res.render('index/contact', {
             contents,
             title: 'Yhteystiedot',
         });
-    } catch(error) {
+    } catch (error) {
         return next(error);
     }
 });

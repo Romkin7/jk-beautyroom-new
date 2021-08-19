@@ -75,6 +75,52 @@
                     </ul>
                 </div>
             {{/if}}
+            {{#if nailsServices}}
+                <div class="col-md-6 col-sm-12">
+                    <h2>Rakennekynnet</h2>
+                    <ul class="list-group list-group-flush">
+                    {{#each nailsServices}}
+                        <li class="list-group-item d-flex flex-row-reverse justify-content-between">
+                            {{#each this}}
+                            {{#if this.name}}
+                            {{this.name}}
+                            {{this.additional}}
+                            {{this.price}} € 
+                            {{#if this.secondPrice}}
+                             - {{this.secondPrice}} €
+                             {{/if}}
+                            {{else if this._id}}
+                            <span class="d-flex"><a href="/admin/services/{{this._id}}" class="btn btn-warning">Muokkaa</a><form action="/admin/services/{{this._id}}?_method=DELETE" method="POST"><button type="submit" class="btn btn-danger">Poista</button></form></span>
+                            {{/if}}
+                            {{/each}}
+                        </li>
+                    {{/each}}
+                    </ul>
+                </div>
+            {{/if}}
+            {{#if footcareServices}}
+                <div class="col-md-6 col-sm-12">
+                    <h2>Jalkahoito</h2>
+                    <ul class="list-group list-group-flush">
+                    {{#each footcareServices}}
+                        <li class="list-group-item d-flex flex-row-reverse justify-content-between">
+                            {{#each this}}
+                            {{#if this.name}}
+                            {{this.name}}
+                            {{this.additional}}
+                            {{this.price}} € 
+                            {{#if this.secondPrice}}
+                             - {{this.secondPrice}} €
+                             {{/if}}
+                            {{else if this._id}}
+                            <span class="d-flex"><a href="/admin/services/{{this._id}}" class="btn btn-warning">Muokkaa</a><form action="/admin/services/{{this._id}}?_method=DELETE" method="POST"><button type="submit" class="btn btn-danger">Poista</button></form></span>
+                            {{/if}}
+                            {{/each}}
+                        </li>
+                    {{/each}}
+                    </ul>
+                </div>
+            {{/if}}
         </div>
     </div>
 </section>
