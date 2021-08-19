@@ -4,16 +4,16 @@
     <div class="container">
         <div class="row my-5">
             <div class="col-md-8">
-
                 {{#if contents}}
                 {{#each contents}}
                 <div class="row">
                     {{#each this}}
                     {{#if this.title}}
                     <div class="col-sm-12">
-                        <h3>{{this.title}}</h3>
+                        <h2>{{this.title}}</h2>
                         {{{this.body}}}
                     </div>
+                    {{#if this.src}}
                     <div class="col-md-4 col-lg-3 col-sm-6">
                         <div class="galleryItem">
                             <picture class="galleryItem--picture">
@@ -25,6 +25,7 @@
                             <p class="galleryItem--description">{{this.alt}}</p>
                         </div>
                     </div>
+                    {{/if}}
                     {{/if}}
                     {{/each}}
                 </div>

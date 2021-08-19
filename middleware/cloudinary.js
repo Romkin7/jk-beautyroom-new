@@ -8,7 +8,7 @@ cloudinary.config({
 
 module.exports.uploadImage = async (req, res, next) => {
     try {
-        if (req.files.image) {
+        if (req.files) {
             const stream = cloudinary.uploader.upload_stream(function (
                 error,
                 result,

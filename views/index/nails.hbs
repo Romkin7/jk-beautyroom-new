@@ -4,9 +4,33 @@
     <div class="container">
         <div class="row my-5">
             <div class="col-md-8">
-                <h2>Rakennekynsien hinnasto</h2>
-                <p>Meiltä saatte rakennekynnet geelilakkauksella ja ilman ja
-                    paljon muuta.</p>
+                {{#if contents}}
+                {{#each contents}}
+                <div class="row my-5">
+                    {{#each this}}
+                    {{#if this.title}}
+                    <div class="col-sm-12">
+                        <h2>{{this.title}}</h2>
+                        {{{this.body}}}
+                    </div>
+                    {{#if this.src}}
+                    <div class="col-md-4 col-lg-3 col-sm-6">
+                        <div class="galleryItem">
+                            <picture class="galleryItem--picture">
+                                <img class="galleryItem--picture__img"
+                                    src="{{this.src}}"
+                                    alt="{{this.alt}}"
+                                    loading="lazy" />
+                            </picture>
+                            <p class="galleryItem--description">{{this.alt}}</p>
+                        </div>
+                    </div>
+                    {{/if}}
+                    {{/if}}
+                    {{/each}}
+                </div>
+                {{/each}}
+                {{/if}}
             </div>
             <div class="col-md-4">
                 <article>
@@ -40,30 +64,5 @@
                 </article>
             </div>
         </div>
-        {{#if contents}}
-        {{#each contents}}
-        <div class="row my-5">
-            {{#each this}}
-            {{#if this.title}}
-            <div class="col-sm-12">
-                <h3>{{this.title}}</h3>
-                {{{this.body}}}
-            </div>
-            <div class="col-md-4 col-lg-3 col-sm-6">
-                <div class="galleryItem">
-                    <picture class="galleryItem--picture">
-                        <img class="galleryItem--picture__img"
-                            src="{{this.src}}"
-                            alt="{{this.alt}}"
-                            loading="lazy" />
-                    </picture>
-                    <p class="galleryItem--description">{{this.alt}}</p>
-                </div>
-            </div>
-            {{/if}}
-            {{/each}}
-        </div>
-        {{/each}}
-        {{/if}}
     </div>
 </section>

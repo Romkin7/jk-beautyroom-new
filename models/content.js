@@ -4,9 +4,8 @@ const contentSchema = new Schema(
     {
         src: {
             type: String,
-            required: true,
         },
-        alt: { type: String, required: true },
+        alt: { type: String },
         title: { type: String, required: true },
         body: { type: String, trim: true, required: true },
         publicId: { type: String },
