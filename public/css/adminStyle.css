@@ -11,7 +11,7 @@ a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  height: 54.313rem;
+  height: 64.313rem;
   margin-bottom: 4.375rem; }
   .adminPanelWrapper--sidebar {
     color: #ffffff;
@@ -35,8 +35,7 @@ a:hover {
   .adminPanelWrapper--main {
     width: 100%; }
     .adminPanelWrapper--main main {
-      min-height: 54.313rem;
-      height: auto;
+      height: 64.313rem;
       overflow-y: scroll; }
       .adminPanelWrapper--main main section.adminPanel {
         height: inherit; }
