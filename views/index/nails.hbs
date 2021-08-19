@@ -16,16 +16,16 @@
                     <ul class="list-group list-group-flush">
                         {{#each nailsServices}}
                         <li class="list-group-item
-                            list-group__item">
+                            list-group--item">
                             {{#each this}}
                             {{#if this.name}}
-                            <div class="list-group__item--name">
-                                <span class="list-group__item--name--text">{{this.name}}</span>
+                            <div class="list-group--item--name">
+                                <span class="list-group--item--name--text">{{this.name}}</span>
                                 {{#if this.additional}}
                                 <small>{{this.additional}}</small>
                                 {{/if}}
                             </div>
-                            <span class="list-group__item--price">{{this.price}}
+                            <span class="list-group--item--price">{{this.price}}
                                 €
                                 {{#if this.secondPrice}}
                                 - {{this.secondPrice}} €
