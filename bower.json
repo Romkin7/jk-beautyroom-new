@@ -1,0 +1,21 @@
+{
+  "name": "jk-beautyroom",
+  "description": "Beauty Salon homepage",
+  "main": "server.js",
+  "authors": [
+    "Roman Tuomisto"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Romkin7/jk-beautyroom-new",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "summernote": "^0.8.18"
+  }
+}

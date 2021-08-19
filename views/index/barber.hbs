@@ -3,17 +3,34 @@
 <section class="barber">
     <div class="container">
         <div class="row my-5">
-            <div class="col-md-10">
-                <h2>Parturi - Kampaamo Hinnasto</h2>
-                <p>Tarjoamme naiste sekä miesten hiusten leikkauksia.</p>
-                <p>
-                    Lisäksi meiltä hiusten Värjäys sekä väripaketit, jotka
-                    sisältävät hiusten leikkauksen ja värjäksen tai
-                    pelkän värjäyksen.
-                </p>
+            <div class="col-md-8">
+
+                {{#if contents}}
+                {{#each contents}}
+                <div class="row">
+                    {{#each this}}
+                    {{#if this.title}}
+                    <div class="col-sm-12">
+                        <h3>{{this.title}}</h3>
+                        {{{this.body}}}
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-sm-6">
+                        <div class="galleryItem">
+                            <picture class="galleryItem--picture">
+                                <img class="galleryItem--picture__img"
+                                    src="{{this.src}}"
+                                    alt="{{this.alt}}"
+                                    loading="lazy" />
+                            </picture>
+                            <p class="galleryItem--description">{{this.alt}}</p>
+                        </div>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                </div>
+                {{/each}}
+                {{/if}}
             </div>
-        </div>
-        <div class="row my-5">
             <div class="col-md-4">
                 <article>
                     <h3>{{haircutTitle}}</h3>
@@ -44,8 +61,6 @@
                         {{/each}}
                     </ul>
                 </article>
-            </div>
-            <div class="col-md-4">
                 <article>
                     <h3>{{hairColorTitle}}</h3>
                     <ul class="list-group list-group-flush">
@@ -75,8 +90,6 @@
                         {{/each}}
                     </ul>
                 </article>
-            </div>
-            <div class="col-md-4">
                 <article>
                     <h3>{{hairColorMixTitle}}</h3>
                     <ul class="list-group list-group-flush">
@@ -108,30 +121,5 @@
                 </article>
             </div>
         </div>
-        {{#if contents}}
-        {{#each contents}}
-        <div class="row my-5">
-            {{#each this}}
-            {{#if this.title}}
-            <div class="col-sm-12">
-                <h3>{{this.title}}</h3>
-                {{{this.body}}}
-            </div>
-            <div class="col-md-4 col-lg-3 col-sm-6">
-                <div class="galleryItem">
-                    <picture class="galleryItem--picture">
-                        <img class="galleryItem--picture__img"
-                            src="{{this.src}}"
-                            alt="{{this.alt}}"
-                            loading="lazy" />
-                    </picture>
-                    <p class="galleryItem--description">{{this.alt}}</p>
-                </div>
-            </div>
-            {{/if}}
-            {{/each}}
-        </div>
-        {{/each}}
-        {{/if}}
     </div>
 </section>

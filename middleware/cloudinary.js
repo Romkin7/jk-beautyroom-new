@@ -8,16 +8,20 @@ cloudinary.config({
 
 module.exports.uploadImage = async (req, res, next) => {
     try {
-        const stream = cloudinary.uploader.upload_stream(function (
-            error,
-            result,
-        ) {
-            req.session.publicId = result.public_id;
-            req.session.secureUrl = result.secure_url;
-            next();
-        });
-        stream.write(req.files.image.data);
-        stream.end();
+        if (req.files.image) {
+            const stream = cloudinary.uploader.upload_stream(function (
+                error,
+                result,
+            ) {
+                req.session.publicId = result.public_id;
+                req.session.secureUrl = result.secure_url;
+                next();
+            });
+            stream.write(req.files.image.data);
+            stream.end();
+        } else {
+            return next();
+        }
     } catch (error) {
         return next(error);
     }
