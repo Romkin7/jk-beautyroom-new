@@ -29,7 +29,8 @@
                         kuvaa</a>
                     <form class="mx-3"
                         action="/admin/contents/{{this._id}}?_method=DELETE"
-                        method="POST"><button type="submit" class="btn
+                        method="POST"><input type="hidden" name="publicId"
+                            value="{{this.publicId}}" /><button type="submit" class="btn
                             btn-danger">Poista</button></form>
                 </div>
                 {{/if}}
