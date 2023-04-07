@@ -7,119 +7,178 @@
         </div>
         <div class="row">
             {{#if haircutServices}}
-                <div class="col-md-6 col-sm-12">
-                    <h2>Parturi kampaamo palvelut</h2>
-                    <ul class="list-group list-group-flush">
+            <div class="col-md-6 col-sm-12">
+                <h2>Parturi kampaamo palvelut</h2>
+                <ul class="list-group list-group-flush">
                     {{#each haircutServices}}
-                        <li class="list-group-item d-flex flex-row-reverse justify-content-between">
-                            {{#each this}}
-                            {{#if this.name}}
-                            {{this.name}}
-                            {{this.additional}}
-                            {{this.price}} € 
-                            {{#if this.secondPrice}}
-                             - {{this.secondPrice}} €
-                             {{/if}}
-                            {{else if this._id}}
-                            <span class="d-flex"><a href="/admin/services/{{this._id}}" class="btn btn-warning">Muokkaa</a><form action="/admin/services/{{this._id}}?_method=DELETE" method="POST"><button type="submit" class="btn btn-danger">Poista</button></form></span>
-                            {{/if}}
-                            {{/each}}
-                        </li>
+                    <li class="list-group-item d-flex flex-row-reverse
+                        justify-content-between">
+                        {{#each this}}
+                        {{#if this.name}}
+                        {{this.name}}
+                        {{this.additional}}
+                        {{this.price}} €
+                        {{#if this.secondPrice}}
+                        - {{this.secondPrice}} €
+                        {{/if}}
+                        {{else if this._id}}
+                        <span class="d-flex"><a
+                                href="/admin/services/{{this._id}}" class="btn
+                                btn-warning">Muokkaa</a><form
+                                action="/admin/services/{{this._id}}?_method=DELETE"
+                                method="POST"><button type="submit" class="btn
+                                    btn-danger">Poista</button></form></span>
+                        {{/if}}
+                        {{/each}}
+                    </li>
                     {{/each}}
-                    </ul>
-                </div>
+                </ul>
+            </div>
             {{/if}}
             {{#if hairColorServices}}
-                <div class="col-md-6 col-sm-12">
-                    <h2>Värjäys</h2>
-                    <ul class="list-group list-group-flush">
+            <div class="col-md-6 col-sm-12">
+                <h2>Värjäys</h2>
+                <ul class="list-group list-group-flush">
                     {{#each hairColorServices}}
-                        <li class="list-group-item d-flex flex-row-reverse justify-content-between">
-                            {{#each this}}
-                            {{#if this.name}}
-                            {{this.name}}
-                            {{this.additional}}
-                            {{this.price}} € 
-                            {{#if this.secondPrice}}
-                             - {{this.secondPrice}} €
-                             {{/if}}
-                            {{else if this._id}}
-                            <span class="d-flex"><a href="/admin/services/{{this._id}}" class="btn btn-warning">Muokkaa</a><form action="/admin/services/{{this._id}}?_method=DELETE" method="POST"><button type="submit" class="btn btn-danger">Poista</button></form></span>
-                            {{/if}}
-                            {{/each}}
-                        </li>
+                    <li class="list-group-item d-flex flex-row-reverse
+                        justify-content-between">
+                        {{#each this}}
+                        {{#if this.name}}
+                        {{this.name}}
+                        {{this.additional}}
+                        {{this.price}} €
+                        {{#if this.secondPrice}}
+                        - {{this.secondPrice}} €
+                        {{/if}}
+                        {{else if this._id}}
+                        <span class="d-flex"><a
+                                href="/admin/services/{{this._id}}" class="btn
+                                btn-warning">Muokkaa</a><form
+                                action="/admin/services/{{this._id}}?_method=DELETE"
+                                method="POST"><button type="submit" class="btn
+                                    btn-danger">Poista</button></form></span>
+                        {{/if}}
+                        {{/each}}
+                    </li>
                     {{/each}}
-                    </ul>
-                </div>
+                </ul>
+            </div>
             {{/if}}
-            {{#if hairColorMixServices}}
-                <div class="col-md-6 col-sm-12">
-                    <h2>Väripaketti</h2>
-                    <ul class="list-group list-group-flush">
-                    {{#each hairColorMixServices}}
-                        <li class="list-group-item d-flex flex-row-reverse justify-content-between">
-                            {{#each this}}
-                            {{#if this.name}}
-                            {{this.name}}
-                            {{this.additional}}
-                            {{this.price}} € 
-                            {{#if this.secondPrice}}
-                             - {{this.secondPrice}} €
-                             {{/if}}
-                            {{else if this._id}}
-                            <span class="d-flex"><a href="/admin/services/{{this._id}}" class="btn btn-warning">Muokkaa</a><form action="/admin/services/{{this._id}}?_method=DELETE" method="POST"><button type="submit" class="btn btn-danger">Poista</button></form></span>
-                            {{/if}}
-                            {{/each}}
-                        </li>
+            {{#if eyeBrowServices}}
+            <div class="col-md-6 col-sm-12">
+                <h2>Ripsien ja kulmien värjäys</h2>
+                <ul class="list-group list-group-flush">
+                    {{#each eyeBrowServices}}
+                    <li class="list-group-item d-flex flex-row-reverse
+                        justify-content-between">
+                        {{#each this}}
+                        {{#if this.name}}
+                        {{this.name}}
+                        {{this.additional}}
+                        {{this.price}} €
+                        {{#if this.secondPrice}}
+                        - {{this.secondPrice}} €
+                        {{/if}}
+                        {{else if this._id}}
+                        <span class="d-flex"><a
+                                href="/admin/services/{{this._id}}" class="btn
+                                btn-warning">Muokkaa</a><form
+                                action="/admin/services/{{this._id}}?_method=DELETE"
+                                method="POST"><button type="submit" class="btn
+                                    btn-danger">Poista</button></form></span>
+                        {{/if}}
+                        {{/each}}
+                    </li>
                     {{/each}}
-                    </ul>
-                </div>
+                </ul>
+            </div>
             {{/if}}
             {{#if nailsServices}}
-                <div class="col-md-6 col-sm-12">
-                    <h2>Rakennekynnet</h2>
-                    <ul class="list-group list-group-flush">
+            <div class="col-md-6 col-sm-12">
+                <h2>Rakennekynnet</h2>
+                <ul class="list-group list-group-flush">
                     {{#each nailsServices}}
-                        <li class="list-group-item d-flex flex-row-reverse justify-content-between">
-                            {{#each this}}
-                            {{#if this.name}}
-                            {{this.name}}
-                            {{this.additional}}
-                            {{this.price}} € 
-                            {{#if this.secondPrice}}
-                             - {{this.secondPrice}} €
-                             {{/if}}
-                            {{else if this._id}}
-                            <span class="d-flex"><a href="/admin/services/{{this._id}}" class="btn btn-warning">Muokkaa</a><form action="/admin/services/{{this._id}}?_method=DELETE" method="POST"><button type="submit" class="btn btn-danger">Poista</button></form></span>
-                            {{/if}}
-                            {{/each}}
-                        </li>
+                    <li class="list-group-item d-flex flex-row-reverse
+                        justify-content-between">
+                        {{#each this}}
+                        {{#if this.name}}
+                        {{this.name}}
+                        {{this.additional}}
+                        {{this.price}} €
+                        {{#if this.secondPrice}}
+                        - {{this.secondPrice}} €
+                        {{/if}}
+                        {{else if this._id}}
+                        <span class="d-flex"><a
+                                href="/admin/services/{{this._id}}" class="btn
+                                btn-warning">Muokkaa</a><form
+                                action="/admin/services/{{this._id}}?_method=DELETE"
+                                method="POST"><button type="submit" class="btn
+                                    btn-danger">Poista</button></form></span>
+                        {{/if}}
+                        {{/each}}
+                    </li>
                     {{/each}}
-                    </ul>
-                </div>
+                </ul>
+            </div>
             {{/if}}
             {{#if footcareServices}}
-                <div class="col-md-6 col-sm-12">
-                    <h2>Jalkahoito</h2>
-                    <ul class="list-group list-group-flush">
+            <div class="col-md-6 col-sm-12">
+                <h2>Jalkahoito</h2>
+                <ul class="list-group list-group-flush">
                     {{#each footcareServices}}
-                        <li class="list-group-item d-flex flex-row-reverse justify-content-between">
-                            {{#each this}}
-                            {{#if this.name}}
-                            {{this.name}}
-                            {{this.additional}}
-                            {{this.price}} € 
-                            {{#if this.secondPrice}}
-                             - {{this.secondPrice}} €
-                             {{/if}}
-                            {{else if this._id}}
-                            <span class="d-flex"><a href="/admin/services/{{this._id}}" class="btn btn-warning">Muokkaa</a><form action="/admin/services/{{this._id}}?_method=DELETE" method="POST"><button type="submit" class="btn btn-danger">Poista</button></form></span>
-                            {{/if}}
-                            {{/each}}
-                        </li>
+                    <li class="list-group-item d-flex flex-row-reverse
+                        justify-content-between">
+                        {{#each this}}
+                        {{#if this.name}}
+                        {{this.name}}
+                        {{this.additional}}
+                        {{this.price}} €
+                        {{#if this.secondPrice}}
+                        - {{this.secondPrice}} €
+                        {{/if}}
+                        {{else if this._id}}
+                        <span class="d-flex"><a
+                                href="/admin/services/{{this._id}}" class="btn
+                                btn-warning">Muokkaa</a><form
+                                action="/admin/services/{{this._id}}?_method=DELETE"
+                                method="POST"><button type="submit" class="btn
+                                    btn-danger">Poista</button></form></span>
+                        {{/if}}
+                        {{/each}}
+                    </li>
                     {{/each}}
-                    </ul>
-                </div>
+                </ul>
+            </div>
+            {{/if}}
+            {{#if cosmetologicServices}}
+            <div class="col-md-6 col-sm-12">
+                <h2>Kosmetologin palvelut</h2>
+                <ul class="list-group list-group-flush">
+                    {{#each cosmetologicServices}}
+                    <li class="list-group-item d-flex flex-row-reverse
+                        justify-content-between">
+                        {{#each this}}
+                        {{#if this.name}}
+                        {{this.name}}
+                        {{this.additional}}
+                        {{this.price}} €
+                        {{#if this.secondPrice}}
+                        - {{this.secondPrice}} €
+                        {{/if}}
+                        {{else if this._id}}
+                        <span class="d-flex"><a
+                                href="/admin/services/{{this._id}}" class="btn
+                                btn-warning">Muokkaa</a><form
+                                action="/admin/services/{{this._id}}?_method=DELETE"
+                                method="POST"><button type="submit" class="btn
+                                    btn-danger">Poista</button></form></span>
+                        {{/if}}
+                        {{/each}}
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
             {{/if}}
         </div>
     </div>

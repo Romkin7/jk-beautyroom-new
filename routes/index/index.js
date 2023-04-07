@@ -24,20 +24,20 @@ router.get('/kampaamo', async (req, res, next) => {
         const hairColorServices = await Service.find({
             category: 'hairColorServices',
         }).sort({ createdAt: 1 });
-        const hairColorMixServices = await Service.find({
-            category: 'hairColorMixServices',
+        const eyeBrowServices = await Service.find({
+            category: 'eyeBrowServices',
         }).sort({
             createdAt: 1,
         });
         const contents = await Content.find({ category: 'barberPage' });
         return res.render('index/barber', {
-            hairColorMixServices,
+            eyeBrowServices,
             hairColorServices,
             contents,
             haircutServices,
             haircutTitle: 'Parturi kampaamo palvelut',
             hairColorTitle: 'Värjäys',
-            hairColorMixTitle: 'Väripaketti',
+            eyeBrowTitle: 'Ripsien ja kulmien värjäys',
             title: 'Parturi - kampaamo',
         });
     } catch (error) {
@@ -86,11 +86,16 @@ router.get('/jalkahoito', async (req, res, next) => {
         const footcareServices = await Service.find({
             category: 'footcareServices',
         }).sort({ price: 1 });
+        const cosmetologicServices = await Service.find({
+            category: 'cosmetologicServices',
+        }).sort({ price: 1 });
         const contents = await Content.find({ category: 'footcarePage' });
         return res.render('index/footcare', {
             footcareServices,
+            cosmetologicServices,
             contents,
             footcareTitle: 'Jalkahoidot',
+            cosmetologicTitle: 'Kosmetologin palvelut',
             title: 'Jalkahoito',
         });
     } catch (error) {

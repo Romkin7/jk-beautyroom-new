@@ -20,8 +20,8 @@ router
             const hairColorServices = await Service.find({
                 category: 'hairColorServices',
             }).sort({ createdAt: 1 });
-            const hairColorMixServices = await Service.find({
-                category: 'hairColorMixServices',
+            const eyeBrowServices = await Service.find({
+                category: 'eyeBrowServices',
             }).sort({
                 price: 1,
             });
@@ -31,12 +31,16 @@ router
             const footcareServices = await Service.find({
                 category: 'footcareServices',
             }).sort({ price: 1 });
+            const cosmetologicServices = await Service.find({
+                category: 'cosmetologicServices',
+            }).sort({ price: 1 });
             return res.render('admin/services/index', {
-                hairColorMixServices,
+                eyeBrowServices,
                 hairColorServices,
                 haircutServices,
                 nailsServices,
                 footcareServices,
+                cosmetologicServices,
                 title: 'Palveluiden hallinta',
                 layout: 'adminLayout',
             });
@@ -81,15 +85,20 @@ router
             return next(error);
         }
     })
-    .put(authObj.isLoggedIn, authObj.isAdmin, async(req, res, next) => {
+    .put(authObj.isLoggedIn, authObj.isAdmin, async (req, res, next) => {
         try {
             const serviceClass = new ServiceClass(req.body).filterService();
-            if(serviceClass.validateService(serviceClass)) {
+            if (serviceClass.validateService(serviceClass)) {
                 await Service.findByIdAndUpdate(req.params.id, serviceClass);
-                req.flash("success", "Onnistui, palvelun " + serviceClass.name + " tietoja on onnistuneesti päivitetty!");
+                req.flash(
+                    'success',
+                    'Onnistui, palvelun ' +
+                        serviceClass.name +
+                        ' tietoja on onnistuneesti päivitetty!',
+                );
                 return res.redirect('/admin/services');
             }
-        } catch(error) {
+        } catch (error) {
             return next(error);
         }
     })
